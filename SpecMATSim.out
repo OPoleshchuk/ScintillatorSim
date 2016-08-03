@@ -1,0 +1,1468 @@
+
+*************************************************************
+ Geant4 version Name: geant4-09-06-patch-04    (30-January-2015)
+                      Copyright : Geant4 Collaboration
+                      Reference : NIM A 506 (2003), 250-303
+                            WWW : http://cern.ch/geant4
+*************************************************************
+
+Checking overlaps for volume sciCrystPl ... OK! 
+Checking overlaps for volume sciWindPl ... OK! 
+Checking overlaps for volume sciReflPl ... OK! 
+Checking overlaps for volume sciHousPl ... OK! 
+
+***** Table : Nb of materials = 21 *****
+
+ Material:   G4_AIR    density:  1.205 mg/cm3  RadL: 303.921 m    Nucl.Int.Length: 710.261 m    Imean:  85.700 eV   temperature: 273.15 K  pressure:   1.00 atm
+   --->  Element: C (C)   Z =  6.0   N =  12.0   A =  12.01 g/mole
+         --->  Isotope:   C12   Z =  6   N =  12   A =  12.00 g/mole   abundance:  98.93 %
+         --->  Isotope:   C13   Z =  6   N =  13   A =  13.00 g/mole   abundance:   1.07 %
+          ElmMassFraction:   0.01 %  ElmAbundance   0.02 % 
+
+   --->  Element: N (N)   Z =  7.0   N =  14.0   A =  14.01 g/mole
+         --->  Isotope:   N14   Z =  7   N =  14   A =  14.00 g/mole   abundance:  99.63 %
+         --->  Isotope:   N15   Z =  7   N =  15   A =  15.00 g/mole   abundance:   0.37 %
+          ElmMassFraction:  75.53 %  ElmAbundance  78.44 % 
+
+   --->  Element: O (O)   Z =  8.0   N =  16.0   A =  16.00 g/mole
+         --->  Isotope:   O16   Z =  8   N =  16   A =  15.99 g/mole   abundance:  99.76 %
+         --->  Isotope:   O17   Z =  8   N =  17   A =  17.00 g/mole   abundance:   0.04 %
+         --->  Isotope:   O18   Z =  8   N =  18   A =  18.00 g/mole   abundance:   0.20 %
+          ElmMassFraction:  23.18 %  ElmAbundance  21.07 % 
+
+   --->  Element: Ar (Ar)   Z = 18.0   N =  39.9   A =  39.95 g/mole
+         --->  Isotope:  Ar36   Z = 18   N =  36   A =  35.97 g/mole   abundance:   0.34 %
+         --->  Isotope:  Ar38   Z = 18   N =  38   A =  37.96 g/mole   abundance:   0.06 %
+         --->  Isotope:  Ar40   Z = 18   N =  40   A =  39.96 g/mole   abundance:  99.60 %
+          ElmMassFraction:   1.28 %  ElmAbundance   0.47 % 
+
+
+ Material:    LaBr3    density:  5.100 g/cm3   RadL:   1.951 cm   Nucl.Int.Length:  31.483 cm   Imean: 391.912 eV 
+   --->  Element: Lanthanum (La)   Z = 57.0   N = 138.9   A = 138.91 g/mole
+         --->  Isotope: La138   Z = 57   N = 138   A = 137.91 g/mole   abundance:   0.09 %
+         --->  Isotope: La139   Z = 57   N = 139   A = 138.91 g/mole   abundance:  99.91 %
+          ElmMassFraction:  36.69 %  ElmAbundance  25.00 % 
+
+   --->  Element: Bromine (Br)   Z = 35.0   N =  79.9   A =  79.90 g/mole
+         --->  Isotope:  Br79   Z = 35   N =  79   A =  78.92 g/mole   abundance:  50.69 %
+         --->  Isotope:  Br81   Z = 35   N =  81   A =  80.92 g/mole   abundance:  49.31 %
+          ElmMassFraction:  63.31 %  ElmAbundance  75.00 % 
+
+
+ Material:   Quartz    density:  2.660 g/cm3   RadL:  10.168 cm   Nucl.Int.Length:  36.069 cm   Imean: 125.663 eV 
+   --->  Element: Silicon (Si)   Z = 14.0   N =  28.1   A =  28.09 g/mole
+         --->  Isotope:  Si28   Z = 14   N =  28   A =  27.98 g/mole   abundance:  92.23 %
+         --->  Isotope:  Si29   Z = 14   N =  29   A =  28.98 g/mole   abundance:   4.68 %
+         --->  Isotope:  Si30   Z = 14   N =  30   A =  29.97 g/mole   abundance:   3.09 %
+          ElmMassFraction:  46.75 %  ElmAbundance  33.33 % 
+
+   --->  Element: Oxygen (O)   Z =  8.0   N =  16.0   A =  16.00 g/mole
+         --->  Isotope:   O16   Z =  8   N =  16   A =  15.99 g/mole   abundance:  99.76 %
+         --->  Isotope:   O17   Z =  8   N =  17   A =  17.00 g/mole   abundance:   0.04 %
+         --->  Isotope:   O18   Z =  8   N =  18   A =  18.00 g/mole   abundance:   0.20 %
+          ElmMassFraction:  53.25 %  ElmAbundance  66.67 % 
+
+
+ Material:     TiO2    density:  4.230 g/cm3   RadL:   4.848 cm   Nucl.Int.Length:  25.518 cm   Imean: 159.698 eV 
+   --->  Element: Titanium (Ti)   Z = 22.0   N =  47.9   A =  47.90 g/mole
+         --->  Isotope:  Ti46   Z = 22   N =  46   A =  45.95 g/mole   abundance:   8.25 %
+         --->  Isotope:  Ti47   Z = 22   N =  47   A =  46.95 g/mole   abundance:   7.44 %
+         --->  Isotope:  Ti48   Z = 22   N =  48   A =  47.95 g/mole   abundance:  73.72 %
+         --->  Isotope:  Ti49   Z = 22   N =  49   A =  48.95 g/mole   abundance:   5.41 %
+         --->  Isotope:  Ti50   Z = 22   N =  50   A =  49.94 g/mole   abundance:   5.18 %
+          ElmMassFraction:  59.95 %  ElmAbundance  33.33 % 
+
+   --->  Element: Oxygen (O)   Z =  8.0   N =  16.0   A =  16.00 g/mole
+         --->  Isotope:   O16   Z =  8   N =  16   A =  15.99 g/mole   abundance:  99.76 %
+         --->  Isotope:   O17   Z =  8   N =  17   A =  17.00 g/mole   abundance:   0.04 %
+         --->  Isotope:   O18   Z =  8   N =  18   A =  18.00 g/mole   abundance:   0.20 %
+          ElmMassFraction:  40.05 %  ElmAbundance  66.67 % 
+
+
+ Material: Aluminum_Alloy    density:  2.700 g/cm3   RadL:   8.893 cm   Nucl.Int.Length:  38.860 cm   Imean: 166.000 eV 
+   --->  Element: Aluminum (Al)   Z = 13.0   N =  27.0   A =  26.98 g/mole
+         --->  Isotope:  Al27   Z = 13   N =  27   A =  26.98 g/mole   abundance: 100.00 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+
+ Material:    LaBr3    density:  5.100 g/cm3   RadL:   1.951 cm   Nucl.Int.Length:  31.483 cm   Imean: 391.912 eV 
+   --->  Element: Lanthanum (La)   Z = 57.0   N = 138.9   A = 138.91 g/mole
+         --->  Isotope: La138   Z = 57   N = 138   A = 137.91 g/mole   abundance:   0.09 %
+         --->  Isotope: La139   Z = 57   N = 139   A = 138.91 g/mole   abundance:  99.91 %
+          ElmMassFraction:  36.69 %  ElmAbundance  25.00 % 
+
+   --->  Element: Bromine (Br)   Z = 35.0   N =  79.9   A =  79.90 g/mole
+         --->  Isotope:  Br79   Z = 35   N =  79   A =  78.92 g/mole   abundance:  50.69 %
+         --->  Isotope:  Br81   Z = 35   N =  81   A =  80.92 g/mole   abundance:  49.31 %
+          ElmMassFraction:  63.31 %  ElmAbundance  75.00 % 
+
+
+ Material:   Quartz    density:  2.660 g/cm3   RadL:  10.168 cm   Nucl.Int.Length:  36.069 cm   Imean: 125.663 eV 
+   --->  Element: Silicon (Si)   Z = 14.0   N =  28.1   A =  28.09 g/mole
+         --->  Isotope:  Si28   Z = 14   N =  28   A =  27.98 g/mole   abundance:  92.23 %
+         --->  Isotope:  Si29   Z = 14   N =  29   A =  28.98 g/mole   abundance:   4.68 %
+         --->  Isotope:  Si30   Z = 14   N =  30   A =  29.97 g/mole   abundance:   3.09 %
+          ElmMassFraction:  46.75 %  ElmAbundance  33.33 % 
+
+   --->  Element: Oxygen (O)   Z =  8.0   N =  16.0   A =  16.00 g/mole
+         --->  Isotope:   O16   Z =  8   N =  16   A =  15.99 g/mole   abundance:  99.76 %
+         --->  Isotope:   O17   Z =  8   N =  17   A =  17.00 g/mole   abundance:   0.04 %
+         --->  Isotope:   O18   Z =  8   N =  18   A =  18.00 g/mole   abundance:   0.20 %
+          ElmMassFraction:  53.25 %  ElmAbundance  66.67 % 
+
+
+ Material:     TiO2    density:  4.230 g/cm3   RadL:   4.848 cm   Nucl.Int.Length:  25.518 cm   Imean: 159.698 eV 
+   --->  Element: Titanium (Ti)   Z = 22.0   N =  47.9   A =  47.90 g/mole
+         --->  Isotope:  Ti46   Z = 22   N =  46   A =  45.95 g/mole   abundance:   8.25 %
+         --->  Isotope:  Ti47   Z = 22   N =  47   A =  46.95 g/mole   abundance:   7.44 %
+         --->  Isotope:  Ti48   Z = 22   N =  48   A =  47.95 g/mole   abundance:  73.72 %
+         --->  Isotope:  Ti49   Z = 22   N =  49   A =  48.95 g/mole   abundance:   5.41 %
+         --->  Isotope:  Ti50   Z = 22   N =  50   A =  49.94 g/mole   abundance:   5.18 %
+          ElmMassFraction:  59.95 %  ElmAbundance  33.33 % 
+
+   --->  Element: Oxygen (O)   Z =  8.0   N =  16.0   A =  16.00 g/mole
+         --->  Isotope:   O16   Z =  8   N =  16   A =  15.99 g/mole   abundance:  99.76 %
+         --->  Isotope:   O17   Z =  8   N =  17   A =  17.00 g/mole   abundance:   0.04 %
+         --->  Isotope:   O18   Z =  8   N =  18   A =  18.00 g/mole   abundance:   0.20 %
+          ElmMassFraction:  40.05 %  ElmAbundance  66.67 % 
+
+
+ Material: Aluminum_Alloy    density:  2.700 g/cm3   RadL:   8.893 cm   Nucl.Int.Length:  38.860 cm   Imean: 166.000 eV 
+   --->  Element: Aluminum (Al)   Z = 13.0   N =  27.0   A =  26.98 g/mole
+         --->  Isotope:  Al27   Z = 13   N =  27   A =  26.98 g/mole   abundance: 100.00 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+
+ Material:    LaBr3    density:  5.100 g/cm3   RadL:   1.951 cm   Nucl.Int.Length:  31.483 cm   Imean: 391.912 eV 
+   --->  Element: Lanthanum (La)   Z = 57.0   N = 138.9   A = 138.91 g/mole
+         --->  Isotope: La138   Z = 57   N = 138   A = 137.91 g/mole   abundance:   0.09 %
+         --->  Isotope: La139   Z = 57   N = 139   A = 138.91 g/mole   abundance:  99.91 %
+          ElmMassFraction:  36.69 %  ElmAbundance  25.00 % 
+
+   --->  Element: Bromine (Br)   Z = 35.0   N =  79.9   A =  79.90 g/mole
+         --->  Isotope:  Br79   Z = 35   N =  79   A =  78.92 g/mole   abundance:  50.69 %
+         --->  Isotope:  Br81   Z = 35   N =  81   A =  80.92 g/mole   abundance:  49.31 %
+          ElmMassFraction:  63.31 %  ElmAbundance  75.00 % 
+
+
+ Material:   Quartz    density:  2.660 g/cm3   RadL:  10.168 cm   Nucl.Int.Length:  36.069 cm   Imean: 125.663 eV 
+   --->  Element: Silicon (Si)   Z = 14.0   N =  28.1   A =  28.09 g/mole
+         --->  Isotope:  Si28   Z = 14   N =  28   A =  27.98 g/mole   abundance:  92.23 %
+         --->  Isotope:  Si29   Z = 14   N =  29   A =  28.98 g/mole   abundance:   4.68 %
+         --->  Isotope:  Si30   Z = 14   N =  30   A =  29.97 g/mole   abundance:   3.09 %
+          ElmMassFraction:  46.75 %  ElmAbundance  33.33 % 
+
+   --->  Element: Oxygen (O)   Z =  8.0   N =  16.0   A =  16.00 g/mole
+         --->  Isotope:   O16   Z =  8   N =  16   A =  15.99 g/mole   abundance:  99.76 %
+         --->  Isotope:   O17   Z =  8   N =  17   A =  17.00 g/mole   abundance:   0.04 %
+         --->  Isotope:   O18   Z =  8   N =  18   A =  18.00 g/mole   abundance:   0.20 %
+          ElmMassFraction:  53.25 %  ElmAbundance  66.67 % 
+
+
+ Material:     TiO2    density:  4.230 g/cm3   RadL:   4.848 cm   Nucl.Int.Length:  25.518 cm   Imean: 159.698 eV 
+   --->  Element: Titanium (Ti)   Z = 22.0   N =  47.9   A =  47.90 g/mole
+         --->  Isotope:  Ti46   Z = 22   N =  46   A =  45.95 g/mole   abundance:   8.25 %
+         --->  Isotope:  Ti47   Z = 22   N =  47   A =  46.95 g/mole   abundance:   7.44 %
+         --->  Isotope:  Ti48   Z = 22   N =  48   A =  47.95 g/mole   abundance:  73.72 %
+         --->  Isotope:  Ti49   Z = 22   N =  49   A =  48.95 g/mole   abundance:   5.41 %
+         --->  Isotope:  Ti50   Z = 22   N =  50   A =  49.94 g/mole   abundance:   5.18 %
+          ElmMassFraction:  59.95 %  ElmAbundance  33.33 % 
+
+   --->  Element: Oxygen (O)   Z =  8.0   N =  16.0   A =  16.00 g/mole
+         --->  Isotope:   O16   Z =  8   N =  16   A =  15.99 g/mole   abundance:  99.76 %
+         --->  Isotope:   O17   Z =  8   N =  17   A =  17.00 g/mole   abundance:   0.04 %
+         --->  Isotope:   O18   Z =  8   N =  18   A =  18.00 g/mole   abundance:   0.20 %
+          ElmMassFraction:  40.05 %  ElmAbundance  66.67 % 
+
+
+ Material: Aluminum_Alloy    density:  2.700 g/cm3   RadL:   8.893 cm   Nucl.Int.Length:  38.860 cm   Imean: 166.000 eV 
+   --->  Element: Aluminum (Al)   Z = 13.0   N =  27.0   A =  26.98 g/mole
+         --->  Isotope:  Al27   Z = 13   N =  27   A =  26.98 g/mole   abundance: 100.00 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+
+ Material:    LaBr3    density:  5.100 g/cm3   RadL:   1.951 cm   Nucl.Int.Length:  31.483 cm   Imean: 391.912 eV 
+   --->  Element: Lanthanum (La)   Z = 57.0   N = 138.9   A = 138.91 g/mole
+         --->  Isotope: La138   Z = 57   N = 138   A = 137.91 g/mole   abundance:   0.09 %
+         --->  Isotope: La139   Z = 57   N = 139   A = 138.91 g/mole   abundance:  99.91 %
+          ElmMassFraction:  36.69 %  ElmAbundance  25.00 % 
+
+   --->  Element: Bromine (Br)   Z = 35.0   N =  79.9   A =  79.90 g/mole
+         --->  Isotope:  Br79   Z = 35   N =  79   A =  78.92 g/mole   abundance:  50.69 %
+         --->  Isotope:  Br81   Z = 35   N =  81   A =  80.92 g/mole   abundance:  49.31 %
+          ElmMassFraction:  63.31 %  ElmAbundance  75.00 % 
+
+
+ Material:   Quartz    density:  2.660 g/cm3   RadL:  10.168 cm   Nucl.Int.Length:  36.069 cm   Imean: 125.663 eV 
+   --->  Element: Silicon (Si)   Z = 14.0   N =  28.1   A =  28.09 g/mole
+         --->  Isotope:  Si28   Z = 14   N =  28   A =  27.98 g/mole   abundance:  92.23 %
+         --->  Isotope:  Si29   Z = 14   N =  29   A =  28.98 g/mole   abundance:   4.68 %
+         --->  Isotope:  Si30   Z = 14   N =  30   A =  29.97 g/mole   abundance:   3.09 %
+          ElmMassFraction:  46.75 %  ElmAbundance  33.33 % 
+
+   --->  Element: Oxygen (O)   Z =  8.0   N =  16.0   A =  16.00 g/mole
+         --->  Isotope:   O16   Z =  8   N =  16   A =  15.99 g/mole   abundance:  99.76 %
+         --->  Isotope:   O17   Z =  8   N =  17   A =  17.00 g/mole   abundance:   0.04 %
+         --->  Isotope:   O18   Z =  8   N =  18   A =  18.00 g/mole   abundance:   0.20 %
+          ElmMassFraction:  53.25 %  ElmAbundance  66.67 % 
+
+
+ Material:     TiO2    density:  4.230 g/cm3   RadL:   4.848 cm   Nucl.Int.Length:  25.518 cm   Imean: 159.698 eV 
+   --->  Element: Titanium (Ti)   Z = 22.0   N =  47.9   A =  47.90 g/mole
+         --->  Isotope:  Ti46   Z = 22   N =  46   A =  45.95 g/mole   abundance:   8.25 %
+         --->  Isotope:  Ti47   Z = 22   N =  47   A =  46.95 g/mole   abundance:   7.44 %
+         --->  Isotope:  Ti48   Z = 22   N =  48   A =  47.95 g/mole   abundance:  73.72 %
+         --->  Isotope:  Ti49   Z = 22   N =  49   A =  48.95 g/mole   abundance:   5.41 %
+         --->  Isotope:  Ti50   Z = 22   N =  50   A =  49.94 g/mole   abundance:   5.18 %
+          ElmMassFraction:  59.95 %  ElmAbundance  33.33 % 
+
+   --->  Element: Oxygen (O)   Z =  8.0   N =  16.0   A =  16.00 g/mole
+         --->  Isotope:   O16   Z =  8   N =  16   A =  15.99 g/mole   abundance:  99.76 %
+         --->  Isotope:   O17   Z =  8   N =  17   A =  17.00 g/mole   abundance:   0.04 %
+         --->  Isotope:   O18   Z =  8   N =  18   A =  18.00 g/mole   abundance:   0.20 %
+          ElmMassFraction:  40.05 %  ElmAbundance  66.67 % 
+
+
+ Material: Aluminum_Alloy    density:  2.700 g/cm3   RadL:   8.893 cm   Nucl.Int.Length:  38.860 cm   Imean: 166.000 eV 
+   --->  Element: Aluminum (Al)   Z = 13.0   N =  27.0   A =  26.98 g/mole
+         --->  Isotope:  Al27   Z = 13   N =  27   A =  26.98 g/mole   abundance: 100.00 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+
+ Material:    LaBr3    density:  5.100 g/cm3   RadL:   1.951 cm   Nucl.Int.Length:  31.483 cm   Imean: 391.912 eV 
+   --->  Element: Lanthanum (La)   Z = 57.0   N = 138.9   A = 138.91 g/mole
+         --->  Isotope: La138   Z = 57   N = 138   A = 137.91 g/mole   abundance:   0.09 %
+         --->  Isotope: La139   Z = 57   N = 139   A = 138.91 g/mole   abundance:  99.91 %
+          ElmMassFraction:  36.69 %  ElmAbundance  25.00 % 
+
+   --->  Element: Bromine (Br)   Z = 35.0   N =  79.9   A =  79.90 g/mole
+         --->  Isotope:  Br79   Z = 35   N =  79   A =  78.92 g/mole   abundance:  50.69 %
+         --->  Isotope:  Br81   Z = 35   N =  81   A =  80.92 g/mole   abundance:  49.31 %
+          ElmMassFraction:  63.31 %  ElmAbundance  75.00 % 
+
+
+ Material:   Quartz    density:  2.660 g/cm3   RadL:  10.168 cm   Nucl.Int.Length:  36.069 cm   Imean: 125.663 eV 
+   --->  Element: Silicon (Si)   Z = 14.0   N =  28.1   A =  28.09 g/mole
+         --->  Isotope:  Si28   Z = 14   N =  28   A =  27.98 g/mole   abundance:  92.23 %
+         --->  Isotope:  Si29   Z = 14   N =  29   A =  28.98 g/mole   abundance:   4.68 %
+         --->  Isotope:  Si30   Z = 14   N =  30   A =  29.97 g/mole   abundance:   3.09 %
+          ElmMassFraction:  46.75 %  ElmAbundance  33.33 % 
+
+   --->  Element: Oxygen (O)   Z =  8.0   N =  16.0   A =  16.00 g/mole
+         --->  Isotope:   O16   Z =  8   N =  16   A =  15.99 g/mole   abundance:  99.76 %
+         --->  Isotope:   O17   Z =  8   N =  17   A =  17.00 g/mole   abundance:   0.04 %
+         --->  Isotope:   O18   Z =  8   N =  18   A =  18.00 g/mole   abundance:   0.20 %
+          ElmMassFraction:  53.25 %  ElmAbundance  66.67 % 
+
+
+ Material:     TiO2    density:  4.230 g/cm3   RadL:   4.848 cm   Nucl.Int.Length:  25.518 cm   Imean: 159.698 eV 
+   --->  Element: Titanium (Ti)   Z = 22.0   N =  47.9   A =  47.90 g/mole
+         --->  Isotope:  Ti46   Z = 22   N =  46   A =  45.95 g/mole   abundance:   8.25 %
+         --->  Isotope:  Ti47   Z = 22   N =  47   A =  46.95 g/mole   abundance:   7.44 %
+         --->  Isotope:  Ti48   Z = 22   N =  48   A =  47.95 g/mole   abundance:  73.72 %
+         --->  Isotope:  Ti49   Z = 22   N =  49   A =  48.95 g/mole   abundance:   5.41 %
+         --->  Isotope:  Ti50   Z = 22   N =  50   A =  49.94 g/mole   abundance:   5.18 %
+          ElmMassFraction:  59.95 %  ElmAbundance  33.33 % 
+
+   --->  Element: Oxygen (O)   Z =  8.0   N =  16.0   A =  16.00 g/mole
+         --->  Isotope:   O16   Z =  8   N =  16   A =  15.99 g/mole   abundance:  99.76 %
+         --->  Isotope:   O17   Z =  8   N =  17   A =  17.00 g/mole   abundance:   0.04 %
+         --->  Isotope:   O18   Z =  8   N =  18   A =  18.00 g/mole   abundance:   0.20 %
+          ElmMassFraction:  40.05 %  ElmAbundance  66.67 % 
+
+
+ Material: Aluminum_Alloy    density:  2.700 g/cm3   RadL:   8.893 cm   Nucl.Int.Length:  38.860 cm   Imean: 166.000 eV 
+   --->  Element: Aluminum (Al)   Z = 13.0   N =  27.0   A =  26.98 g/mole
+         --->  Isotope:  Al27   Z = 13   N =  27   A =  26.98 g/mole   abundance: 100.00 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+
+
+G4SDManager::AddNewCollection : the collection <crystal/edep> is registered at 1
+New sensitive detector <crystal> is registored at /
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Current available graphics systems are:
+  ASCIITree (ATree)
+  DAWNFILE (DAWNFILE)
+  G4HepRep (HepRepXML)
+  G4HepRepFile (HepRepFile)
+  OpenGLImmediateX (OGLI, OGLIX)
+  OpenGLStoredX (OGL, OGLS, OGLSX)
+  RayTracer (RayTracer)
+  VRML1FILE (VRML1FILE)
+  VRML2FILE (VRML2FILE)
+  gMocrenFile (gMocrenFile)
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByCharge
+  drawByParticleID
+  drawByOriginVolume
+  drawByAttribute
+
+Registered filter factories:
+  chargeFilter
+  particleFilter
+  originVolumeFilter
+  attributeFilter
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+Available colours:
+  black, blue, brown, cyan, gray, green, grey, magenta, red, white, yellow
+
+### Run 0 start.
+Using Root analysis manager
+Event №0
+
+---> Begin of event: 0
+
+LaBr3 Nb0: 823.584 keV Event №1
+
+LaBr3 Nb0: 616.468 keV Event №2
+Event №3
+Event №4
+
+LaBr3 Nb0: 63.1847 keV Event №5
+
+LaBr3 Nb0: 826.054 keV Event №6
+Event №7
+Event №8
+Event №9
+Event №10
+Event №11
+Event №12
+Event №13
+Event №14
+Event №15
+Event №16
+Event №17
+Event №18
+Event №19
+Event №20
+Event №21
+Event №22
+Event №23
+Event №24
+Event №25
+Event №26
+Event №27
+Event №28
+Event №29
+Event №30
+Event №31
+Event №32
+Event №33
+Event №34
+
+LaBr3 Nb0: 163.722 keV Event №35
+Event №36
+Event №37
+
+LaBr3 Nb0: 123.189 keV Event №38
+Event №39
+Event №40
+Event №41
+Event №42
+Event №43
+Event №44
+Event №45
+Event №46
+
+LaBr3 Nb0: 507.265 keV Event №47
+Event №48
+Event №49
+Event №50
+Event №51
+
+LaBr3 Nb0: 501.38 keV Event №52
+Event №53
+Event №54
+Event №55
+Event №56
+Event №57
+
+LaBr3 Nb0: 641.434 keV Event №58
+Event №59
+Event №60
+Event №61
+Event №62
+Event №63
+Event №64
+Event №65
+
+LaBr3 Nb0: 619.297 keV Event №66
+Event №67
+Event №68
+Event №69
+
+LaBr3 Nb0: 826.054 keV Event №70
+Event №71
+Event №72
+Event №73
+Event №74
+Event №75
+Event №76
+
+LaBr3 Nb0: 482.395 keV Event №77
+Event №78
+Event №79
+
+LaBr3 Nb0: 299.573 keV Event №80
+Event №81
+Event №82
+Event №83
+Event №84
+Event №85
+Event №86
+Event №87
+Event №88
+Event №89
+Event №90
+
+LaBr3 Nb0: 209.221 keV Event №91
+Event №92
+Event №93
+
+LaBr3 Nb0: 1012.69 keV Event №94
+Event №95
+Event №96
+Event №97
+Event №98
+Event №99
+Event №100
+Event №101
+Event №102
+Event №103
+Event №104
+
+LaBr3 Nb0: 542.612 keV Event №105
+Event №106
+Event №107
+Event №108
+Event №109
+Event №110
+Event №111
+Event №112
+Event №113
+Event №114
+Event №115
+Event №116
+Event №117
+Event №118
+Event №119
+Event №120
+Event №121
+Event №122
+Event №123
+Event №124
+Event №125
+
+LaBr3 Nb0: 204.762 keV Event №126
+Event №127
+Event №128
+
+LaBr3 Nb0: 131.49 keV Event №129
+Event №130
+Event №131
+Event №132
+Event №133
+
+LaBr3 Nb0: 1173.93 keV Event №134
+Event №135
+Event №136
+Event №137
+Event №138
+Event №139
+Event №140
+Event №141
+Event №142
+Event №143
+Event №144
+Event №145
+Event №146
+Event №147
+
+LaBr3 Nb0: 1173.93 keV Event №148
+Event №149
+Event №150
+Event №151
+Event №152
+
+LaBr3 Nb0: 1173.93 keV Event №153
+Event №154
+
+LaBr3 Nb0: 217.49 keV Event №155
+Event №156
+Event №157
+Event №158
+
+LaBr3 Nb0: 577.883 keV Event №159
+Event №160
+Event №161
+Event №162
+Event №163
+Event №164
+Event №165
+Event №166
+Event №167
+Event №168
+Event №169
+Event №170
+Event №171
+Event №172
+Event №173
+Event №174
+Event №175
+Event №176
+Event №177
+Event №178
+Event №179
+Event №180
+Event №181
+Event №182
+Event №183
+Event №184
+Event №185
+Event №186
+Event №187
+Event №188
+Event №189
+Event №190
+Event №191
+Event №192
+Event №193
+Event №194
+
+LaBr3 Nb0: 826.054 keV Event №195
+Event №196
+
+LaBr3 Nb0: 555.82 keV Event №197
+Event №198
+Event №199
+Event №200
+Event №201
+Event №202
+Event №203
+Event №204
+Event №205
+Event №206
+Event №207
+Event №208
+Event №209
+Event №210
+Event №211
+Event №212
+Event №213
+
+LaBr3 Nb0: 19.1244 keV Event №214
+Event №215
+Event №216
+Event №217
+Event №218
+Event №219
+Event №220
+Event №221
+Event №222
+Event №223
+Event №224
+
+LaBr3 Nb0: 826.054 keV Event №225
+Event №226
+Event №227
+Event №228
+Event №229
+Event №230
+Event №231
+Event №232
+Event №233
+Event №234
+Event №235
+Event №236
+Event №237
+Event №238
+Event №239
+Event №240
+Event №241
+Event №242
+Event №243
+Event №244
+Event №245
+Event №246
+Event №247
+
+LaBr3 Nb0: 826.054 keV Event №248
+
+LaBr3 Nb0: 497.482 keV Event №249
+Event №250
+Event №251
+Event №252
+Event №253
+Event №254
+
+LaBr3 Nb0: 143.082 keV Event №255
+Event №256
+Event №257
+Event №258
+Event №259
+
+LaBr3 Nb0: 785.087 keV Event №260
+Event №261
+Event №262
+Event №263
+Event №264
+Event №265
+Event №266
+Event №267
+Event №268
+Event №269
+Event №270
+
+LaBr3 Nb0: 1999.98 keV Event №271
+Event №272
+Event №273
+Event №274
+Event №275
+Event №276
+Event №277
+
+LaBr3 Nb0: 826.054 keV Event №278
+Event №279
+
+LaBr3 Nb0: 641.988 keV Event №280
+
+LaBr3 Nb0: 418.028 keV Event №281
+Event №282
+Event №283
+
+LaBr3 Nb0: 740.6 keV Event №284
+Event №285
+Event №286
+Event №287
+Event №288
+Event №289
+
+LaBr3 Nb0: 824.981 keV Event №290
+Event №291
+Event №292
+Event №293
+Event №294
+Event №295
+Event №296
+Event №297
+Event №298
+Event №299
+
+LaBr3 Nb0: 1173.93 keV Event №300
+Event №301
+Event №302
+Event №303
+Event №304
+Event №305
+Event №306
+Event №307
+Event №308
+Event №309
+Event №310
+Event №311
+Event №312
+Event №313
+Event №314
+Event №315
+Event №316
+Event №317
+Event №318
+
+LaBr3 Nb0: 826.054 keV Event №319
+Event №320
+Event №321
+
+LaBr3 Nb0: 1173.93 keV Event №322
+Event №323
+Event №324
+
+LaBr3 Nb0: 522.807 keV Event №325
+Event №326
+Event №327
+Event №328
+Event №329
+Event №330
+Event №331
+Event №332
+Event №333
+
+LaBr3 Nb0: 901.788 keV Event №334
+Event №335
+Event №336
+Event №337
+Event №338
+Event №339
+Event №340
+Event №341
+
+LaBr3 Nb0: 826.054 keV Event №342
+Event №343
+Event №344
+Event №345
+Event №346
+Event №347
+Event №348
+Event №349
+Event №350
+Event №351
+Event №352
+Event №353
+Event №354
+Event №355
+
+LaBr3 Nb0: 1193.8 keV Event №356
+Event №357
+Event №358
+Event №359
+Event №360
+Event №361
+Event №362
+Event №363
+Event №364
+
+LaBr3 Nb0: 455.038 keV Event №365
+Event №366
+Event №367
+Event №368
+Event №369
+Event №370
+Event №371
+Event №372
+
+LaBr3 Nb0: 826.054 keV Event №373
+Event №374
+Event №375
+Event №376
+Event №377
+Event №378
+Event №379
+
+LaBr3 Nb0: 290.699 keV Event №380
+Event №381
+Event №382
+
+LaBr3 Nb0: 1078.6 keV Event №383
+Event №384
+Event №385
+Event №386
+Event №387
+Event №388
+Event №389
+Event №390
+Event №391
+
+LaBr3 Nb0: 826.054 keV Event №392
+Event №393
+Event №394
+Event №395
+
+LaBr3 Nb0: 31.6154 keV Event №396
+Event №397
+Event №398
+Event №399
+Event №400
+Event №401
+Event №402
+Event №403
+Event №404
+Event №405
+Event №406
+Event №407
+Event №408
+Event №409
+Event №410
+Event №411
+
+LaBr3 Nb0: 834.954 keV Event №412
+
+LaBr3 Nb0: 783.554 keV Event №413
+Event №414
+Event №415
+Event №416
+Event №417
+Event №418
+Event №419
+
+LaBr3 Nb0: 1173.93 keV Event №420
+Event №421
+Event №422
+Event №423
+Event №424
+Event №425
+Event №426
+
+LaBr3 Nb0: 659.73 keV Event №427
+Event №428
+
+LaBr3 Nb0: 1173.93 keV Event №429
+Event №430
+Event №431
+Event №432
+Event №433
+Event №434
+Event №435
+
+LaBr3 Nb0: 826.054 keV Event №436
+Event №437
+Event №438
+Event №439
+Event №440
+Event №441
+Event №442
+
+LaBr3 Nb0: 627.699 keV Event №443
+Event №444
+Event №445
+Event №446
+Event №447
+Event №448
+Event №449
+Event №450
+Event №451
+Event №452
+Event №453
+Event №454
+Event №455
+Event №456
+Event №457
+
+LaBr3 Nb0: 1381.4 keV Event №458
+Event №459
+Event №460
+
+LaBr3 Nb0: 584.595 keV Event №461
+Event №462
+Event №463
+Event №464
+Event №465
+Event №466
+
+LaBr3 Nb0: 174.895 keV Event №467
+Event №468
+Event №469
+Event №470
+Event №471
+Event №472
+Event №473
+Event №474
+Event №475
+Event №476
+Event №477
+Event №478
+
+LaBr3 Nb0: 1173.93 keV Event №479
+Event №480
+Event №481
+Event №482
+
+LaBr3 Nb0: 1173.93 keV Event №483
+Event №484
+Event №485
+Event №486
+Event №487
+Event №488
+Event №489
+Event №490
+Event №491
+Event №492
+Event №493
+Event №494
+Event №495
+Event №496
+Event №497
+Event №498
+
+LaBr3 Nb0: 1173.93 keV Event №499
+Event №500
+Event №501
+Event №502
+Event №503
+
+LaBr3 Nb0: 320.12 keV Event №504
+Event №505
+Event №506
+Event №507
+Event №508
+
+LaBr3 Nb0: 404.36 keV Event №509
+
+LaBr3 Nb0: 846.871 keV Event №510
+Event №511
+Event №512
+Event №513
+
+LaBr3 Nb0: 826.054 keV Event №514
+Event №515
+Event №516
+Event №517
+Event №518
+Event №519
+
+LaBr3 Nb0: 495.64 keV Event №520
+Event №521
+Event №522
+Event №523
+Event №524
+Event №525
+Event №526
+Event №527
+Event №528
+Event №529
+Event №530
+Event №531
+Event №532
+Event №533
+Event №534
+Event №535
+Event №536
+Event №537
+Event №538
+Event №539
+Event №540
+Event №541
+Event №542
+Event №543
+Event №544
+Event №545
+Event №546
+
+LaBr3 Nb0: 54.7559 keV Event №547
+Event №548
+Event №549
+Event №550
+Event №551
+Event №552
+
+LaBr3 Nb0: 826.054 keV Event №553
+Event №554
+Event №555
+Event №556
+Event №557
+Event №558
+Event №559
+Event №560
+Event №561
+Event №562
+Event №563
+Event №564
+Event №565
+Event №566
+Event №567
+Event №568
+Event №569
+Event №570
+
+LaBr3 Nb0: 826.054 keV Event №571
+Event №572
+
+LaBr3 Nb0: 1173.93 keV Event №573
+Event №574
+Event №575
+Event №576
+Event №577
+
+LaBr3 Nb0: 826.054 keV Event №578
+Event №579
+
+LaBr3 Nb0: 826.054 keV Event №580
+Event №581
+Event №582
+Event №583
+Event №584
+Event №585
+Event №586
+Event №587
+Event №588
+Event №589
+Event №590
+Event №591
+Event №592
+Event №593
+Event №594
+Event №595
+Event №596
+Event №597
+Event №598
+Event №599
+
+LaBr3 Nb0: 517.268 keV Event №600
+Event №601
+Event №602
+Event №603
+
+LaBr3 Nb0: 826.054 keV Event №604
+Event №605
+Event №606
+Event №607
+Event №608
+Event №609
+Event №610
+Event №611
+Event №612
+
+LaBr3 Nb0: 60.2774 keV Event №613
+Event №614
+Event №615
+Event №616
+Event №617
+Event №618
+Event №619
+Event №620
+Event №621
+Event №622
+Event №623
+Event №624
+Event №625
+Event №626
+Event №627
+Event №628
+Event №629
+Event №630
+Event №631
+Event №632
+Event №633
+Event №634
+Event №635
+Event №636
+Event №637
+Event №638
+Event №639
+Event №640
+
+LaBr3 Nb0: 152.862 keV Event №641
+Event №642
+Event №643
+Event №644
+Event №645
+Event №646
+
+LaBr3 Nb0: 826.054 keV Event №647
+Event №648
+Event №649
+
+LaBr3 Nb0: 826.054 keV Event №650
+Event №651
+Event №652
+Event №653
+Event №654
+Event №655
+
+LaBr3 Nb0: 196.944 keV Event №656
+Event №657
+Event №658
+Event №659
+
+LaBr3 Nb0: 635.531 keV Event №660
+Event №661
+Event №662
+Event №663
+Event №664
+Event №665
+Event №666
+Event №667
+Event №668
+Event №669
+
+LaBr3 Nb0: 815.049 keV Event №670
+Event №671
+Event №672
+Event №673
+Event №674
+
+LaBr3 Nb0: 826.054 keV Event №675
+Event №676
+Event №677
+Event №678
+Event №679
+Event №680
+Event №681
+Event №682
+
+LaBr3 Nb0: 473.473 keV Event №683
+Event №684
+Event №685
+Event №686
+Event №687
+
+LaBr3 Nb0: 478.823 keV Event №688
+Event №689
+Event №690
+
+LaBr3 Nb0: 473.753 keV Event №691
+Event №692
+Event №693
+Event №694
+Event №695
+Event №696
+Event №697
+
+LaBr3 Nb0: 826.054 keV Event №698
+Event №699
+Event №700
+Event №701
+Event №702
+Event №703
+Event №704
+Event №705
+
+LaBr3 Nb0: 826.054 keV Event №706
+Event №707
+Event №708
+Event №709
+Event №710
+Event №711
+Event №712
+Event №713
+Event №714
+Event №715
+Event №716
+Event №717
+Event №718
+Event №719
+Event №720
+
+LaBr3 Nb0: 8.20378 keV Event №721
+Event №722
+Event №723
+Event №724
+Event №725
+
+LaBr3 Nb0: 826.054 keV Event №726
+
+LaBr3 Nb0: 856.268 keV Event №727
+Event №728
+Event №729
+
+LaBr3 Nb0: 826.054 keV Event №730
+
+LaBr3 Nb0: 868.909 keV Event №731
+Event №732
+Event №733
+Event №734
+Event №735
+Event №736
+Event №737
+Event №738
+Event №739
+
+LaBr3 Nb0: 394.712 keV Event №740
+Event №741
+Event №742
+Event №743
+Event №744
+
+LaBr3 Nb0: 950.553 keV Event №745
+Event №746
+
+LaBr3 Nb0: 826.054 keV Event №747
+
+LaBr3 Nb0: 745.333 keV Event №748
+Event №749
+Event №750
+Event №751
+
+LaBr3 Nb0: 609.793 keV Event №752
+Event №753
+Event №754
+Event №755
+Event №756
+Event №757
+Event №758
+Event №759
+Event №760
+Event №761
+Event №762
+Event №763
+Event №764
+
+LaBr3 Nb0: 1999.96 keV Event №765
+Event №766
+
+LaBr3 Nb0: 1173.93 keV Event №767
+Event №768
+Event №769
+Event №770
+Event №771
+
+LaBr3 Nb0: 784.927 keV Event №772
+Event №773
+Event №774
+Event №775
+
+LaBr3 Nb0: 1522.86 keV Event №776
+Event №777
+
+LaBr3 Nb0: 1173.93 keV Event №778
+
+LaBr3 Nb0: 720.81 keV Event №779
+Event №780
+Event №781
+Event №782
+Event №783
+Event №784
+Event №785
+Event №786
+Event №787
+Event №788
+
+LaBr3 Nb0: 281.782 keV Event №789
+Event №790
+Event №791
+
+LaBr3 Nb0: 826.054 keV Event №792
+Event №793
+Event №794
+Event №795
+Event №796
+Event №797
+Event №798
+Event №799
+Event №800
+Event №801
+Event №802
+Event №803
+Event №804
+Event №805
+Event №806
+Event №807
+Event №808
+Event №809
+Event №810
+Event №811
+Event №812
+Event №813
+Event №814
+Event №815
+Event №816
+
+LaBr3 Nb0: 1173.93 keV Event №817
+Event №818
+Event №819
+Event №820
+Event №821
+Event №822
+Event №823
+Event №824
+Event №825
+Event №826
+
+LaBr3 Nb0: 826.054 keV Event №827
+Event №828
+Event №829
+Event №830
+Event №831
+Event №832
+Event №833
+Event №834
+Event №835
+
+LaBr3 Nb0: 649.057 keV Event №836
+Event №837
+Event №838
+Event №839
+Event №840
+Event №841
+Event №842
+Event №843
+Event №844
+Event №845
+Event №846
+Event №847
+Event №848
+Event №849
+Event №850
+Event №851
+Event №852
+Event №853
+Event №854
+Event №855
+Event №856
+
+LaBr3 Nb0: 1173.93 keV Event №857
+Event №858
+
+LaBr3 Nb0: 978.74 keV Event №859
+Event №860
+Event №861
+Event №862
+Event №863
+Event №864
+Event №865
+
+LaBr3 Nb0: 1277.93 keV Event №866
+Event №867
+
+LaBr3 Nb0: 1173.93 keV Event №868
+
+LaBr3 Nb0: 1173.93 keV Event №869
+Event №870
+Event №871
+Event №872
+Event №873
+Event №874
+Event №875
+Event №876
+Event №877
+Event №878
+Event №879
+Event №880
+Event №881
+Event №882
+Event №883
+Event №884
+Event №885
+Event №886
+Event №887
+Event №888
+Event №889
+Event №890
+Event №891
+Event №892
+Event №893
+Event №894
+Event №895
+Event №896
+Event №897
+Event №898
+Event №899
+Event №900
+Event №901
+Event №902
+Event №903
+Event №904
+Event №905
+Event №906
+Event №907
+Event №908
+Event №909
+Event №910
+
+LaBr3 Nb0: 617.439 keV Event №911
+
+LaBr3 Nb0: 532.963 keV Event №912
+Event №913
+Event №914
+Event №915
+Event №916
+Event №917
+Event №918
+Event №919
+Event №920
+Event №921
+
+LaBr3 Nb0: 480.34 keV Event №922
+Event №923
+Event №924
+
+LaBr3 Nb0: 826.054 keV Event №925
+Event №926
+Event №927
+Event №928
+
+LaBr3 Nb0: 1317.1 keV Event №929
+Event №930
+Event №931
+Event №932
+Event №933
+Event №934
+Event №935
+Event №936
+Event №937
+Event №938
+Event №939
+Event №940
+
+LaBr3 Nb0: 553.863 keV Event №941
+Event №942
+Event №943
+Event №944
+Event №945
+Event №946
+Event №947
+Event №948
+Event №949
+Event №950
+Event №951
+Event №952
+Event №953
+Event №954
+
+LaBr3 Nb0: 179.376 keV Event №955
+
+LaBr3 Nb0: 586.607 keV Event №956
+Event №957
+Event №958
+
+LaBr3 Nb0: 826.054 keV Event №959
+Event №960
+
+LaBr3 Nb0: 312.494 keV Event №961
+
+LaBr3 Nb0: 1449.06 keV Event №962
+Event №963
+Event №964
+Event №965
+
+LaBr3 Nb0: 1173.93 keV Event №966
+Event №967
+
+LaBr3 Nb0: 1999.98 keV Event №968
+
+LaBr3 Nb0: 826.054 keV Event №969
+Event №970
+Event №971
+Event №972
+Event №973
+Event №974
+Event №975
+Event №976
+Event №977
+Event №978
+Event №979
+Event №980
+Event №981
+Event №982
+Event №983
+Event №984
+
+LaBr3 Nb0: 551.468 keV Event №985
+Event №986
+
+LaBr3 Nb0: 826.054 keV Event №987
+Event №988
+Event №989
+
+LaBr3 Nb0: 826.054 keV Event №990
+Event №991
+Event №992
+Event №993
+Event №994
+Event №995
+
+LaBr3 Nb0: 302.618 keV Event №996
+Event №997
+Event №998
+Event №999
+
+--------------------End of Run------------------------------
+ The Run was 1000 Ni60[2000.0]
+------------------------------------------------------------
+
+Graphics systems deleted.
+Visualization Manager deleting...
