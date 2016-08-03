@@ -1,8 +1,8 @@
-/// \file SpecMATSimDetectorConstruction.hh
-/// \brief Definition of the SpecMATSimDetectorConstruction class
+/// \file ScintSimDetectorConstruction.hh
+/// \brief Definition of the ScintSimDetectorConstruction class
 
-#ifndef SpecMATSimDetectorConstruction_h
-#define SpecMATSimDetectorConstruction_h 1
+#ifndef ScintSimDetectorConstruction_h
+#define ScintSimDetectorConstruction_h 1
 
 #include "G4Material.hh"
 #include "G4VUserDetectorConstruction.hh"
@@ -14,7 +14,7 @@ class G4LogicalVolume;
 /// Detector construction class to define materials and geometry.
 ///
 
-class SpecMATSimDetectorConstruction : public G4VUserDetectorConstruction
+class ScintSimDetectorConstruction : public G4VUserDetectorConstruction
 {
   private:
     void DefineMaterials();
@@ -26,7 +26,7 @@ class SpecMATSimDetectorConstruction : public G4VUserDetectorConstruction
     G4double worldSizeXY;
     G4double worldSizeZ;
 
-    G4double sciCrystSizeX;      
+    G4double sciCrystSizeX;
     G4double sciCrystSizeY;
     G4double sciCrystSizeZ;
 
@@ -41,7 +41,7 @@ class SpecMATSimDetectorConstruction : public G4VUserDetectorConstruction
     G4double sciHousWallThickX;
     G4double sciHousWallThickY;
     G4double sciHousWindThick;
-    
+
     G4Element* La;
     G4Element* Ce;
     G4Element* Br;
@@ -60,16 +60,16 @@ class SpecMATSimDetectorConstruction : public G4VUserDetectorConstruction
     G4Material* Quartz;
     G4Material* TiO2;
     G4Material* Al_Alloy;
-    
+
     G4String sciCrystShape;
 
     G4LogicalVolume*  fLogicCryst;
-    
+
     G4bool  fCheckOverlaps;
 
   public:
-    SpecMATSimDetectorConstruction();
-    virtual ~SpecMATSimDetectorConstruction();
+    ScintSimDetectorConstruction();
+    virtual ~ScintSimDetectorConstruction();
 
     virtual G4VPhysicalVolume* Construct();
 
@@ -84,7 +84,7 @@ class SpecMATSimDetectorConstruction : public G4VUserDetectorConstruction
 
     void SetSciCrystMat (G4String);
     G4Material* GetSciCrystMat(){return sciCrystMat;}
-    
+
     void SetSciCrystShape (G4String);
     G4String GetSciCrystShape(){return sciCrystShape;}
 };
@@ -92,4 +92,3 @@ class SpecMATSimDetectorConstruction : public G4VUserDetectorConstruction
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 #endif
-

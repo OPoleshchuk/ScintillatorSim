@@ -1,5 +1,5 @@
 # ScintillatorSim
-This simulation was written during studying of GEANT4 and evolve over time from a one crystal into a crystal array. Now it forms the basis of SpecMATscint. The latest stable version with a one crystal is stored here. Crystal could take two of the most widespread detector shapes, cubic and cylinder.
+This simulation was written during studying of GEANT4 and evolve over time from a one crystal into a crystal array. Now it forms the basis of Scintscint. The latest stable version with a one crystal is stored here. Crystal could take two of the most widespread detector shapes, cubic and cylinder. Crystal in the simulation wrapped in a reflector material and stored in aluminum housing with a quartz window.
 
 Cube                       |  Cylinder
 :-------------------------:|:-------------------------:
@@ -25,7 +25,7 @@ Cube                       |  Cylinder
   - Execute in the interactive mode:
 
     ```
-    $ ./SpecMATsim
+    $ ./Scintsim
     ```
     ```
     Idle> /control/execute vis.mac    # visualization
@@ -34,12 +34,12 @@ Cube                       |  Cylinder
   - Execute in batch mode from a macro file
 
     ```
-    $ ./SpecMATsim SpecMATsim.in > SpecMATsim.out
+    $ ./Scintsim Scintsim.in > Scintsim.out
     ```
   - or run the script to execute in batch mode and have a progress bar
 
     ```
-    $ ./SpecMATsim.sh
+    $ ./Scintsim.sh
     ```
 
 ## Requirements

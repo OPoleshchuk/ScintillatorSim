@@ -1,8 +1,8 @@
-/// \file SpecMATSimPrimaryGeneratorAction.hh
-/// \brief Definition of the SpecMATSimPrimaryGeneratorAction class
+/// \file ScintSimPrimaryGeneratorAction.hh
+/// \brief Definition of the ScintSimPrimaryGeneratorAction class
 
-#ifndef SpecMATSimPrimaryGeneratorAction_h
-#define SpecMATSimPrimaryGeneratorAction_h 1
+#ifndef ScintSimPrimaryGeneratorAction_h
+#define ScintSimPrimaryGeneratorAction_h 1
 
 #include "G4VUserPrimaryGeneratorAction.hh"
 #include "G4ParticleGun.hh"
@@ -10,33 +10,33 @@
 
 class G4ParticleGun;
 class G4Event;
-class SpecMATSimDetectorConstruction;
+class ScintSimDetectorConstruction;
 
 /// The primary generator action class with particle gum.
 ///
-/// It defines an ion (Co60), at rest). Ion can be changed 
+/// It defines an ion (Co60), at rest). Ion can be changed
 /// with the G4ParticleGun commands (see run2.mac).
 
-class SpecMATSimPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
+class ScintSimPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 {
   public:
-    SpecMATSimPrimaryGeneratorAction();    
-    virtual ~SpecMATSimPrimaryGeneratorAction();
+    ScintSimPrimaryGeneratorAction();
+    virtual ~ScintSimPrimaryGeneratorAction();
 
-    virtual void GeneratePrimaries(G4Event*);         
+    virtual void GeneratePrimaries(G4Event*);
 
     const G4ParticleGun* GetParticleGun() const { return fParticleGun; }
-    
+
     void SetDistFromCrystSurfToSource(G4double val) { distFromCrystSurfToSource = val; }
     G4double GetDistFromCrystSurfToSource(void) { return distFromCrystSurfToSource;}
-    
+
     void SetGammaEnergy(G4double val) { gammaEnergy = val; }
     G4double GetGammaEnergy(void) { return gammaEnergy;}
   private:
-    SpecMATSimDetectorConstruction* sciCryst;
-    
+    ScintSimDetectorConstruction* sciCryst;
+
     G4ParticleGun*  fParticleGun;
-    
+
     G4double crystSizeZ;
     G4double distFromCrystSurfToSource;
     G4double gammaEnergy;
@@ -45,5 +45,3 @@ class SpecMATSimPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 #endif
-
-

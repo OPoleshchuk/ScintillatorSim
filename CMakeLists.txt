@@ -2,7 +2,7 @@
 # Setup the project
 #
 cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
-project(SpecMATSim)
+project(ScintSim)
 
 #----------------------------------------------------------------------------
 # Find Geant4 package, activating all available UI and Vis drivers by default
@@ -33,22 +33,22 @@ file(GLOB headers ${PROJECT_SOURCE_DIR}/include/*.hh)
 #----------------------------------------------------------------------------
 # Add the executable, and link it to the Geant4 libraries
 #
-add_executable(SpecMATSim SpecMATSim.cc ${sources} ${headers})
-target_link_libraries(SpecMATSim ${Geant4_LIBRARIES})
+add_executable(ScintSim ScintSim.cc ${sources} ${headers})
+target_link_libraries(ScintSim ${Geant4_LIBRARIES})
 
 #----------------------------------------------------------------------------
 # Copy all scripts to the build directory, i.e. the directory in which we
-# build SpecMATSim. This is so that we can run the executable directly because it
+# build ScintSim. This is so that we can run the executable directly because it
 # relies on these scripts being in the current working directory.
 #
-set(SPECMATSIM_SCRIPTS
-  SpecMATSim.in
-  SpecMATSim.out
-  SpecMATSim.sh
+set(ScintSIM_SCRIPTS
+  ScintSim.in
+  ScintSim.out
+  ScintSim.sh
   vis.mac
   )
 
-foreach(_script ${SPECMATSIM_SCRIPTS})
+foreach(_script ${ScintSIM_SCRIPTS})
   configure_file(
     ${PROJECT_SOURCE_DIR}/${_script}
     ${PROJECT_BINARY_DIR}/${_script}
@@ -60,9 +60,9 @@ endforeach()
 # For internal Geant4 use - but has no effect if you build this
 # example standalone
 #
-add_custom_target(SpecMAT DEPENDS SpecMATSim)
+add_custom_target(Scint DEPENDS ScintSim)
 
 #----------------------------------------------------------------------------
 # Install the executable to 'bin' directory under CMAKE_INSTALL_PREFIX
 #
-install(TARGETS SpecMATSim DESTINATION bin )
+install(TARGETS ScintSim DESTINATION bin )

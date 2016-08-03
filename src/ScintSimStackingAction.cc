@@ -1,25 +1,25 @@
-/// \file SpecMATSimStackingAction.cc
-/// \brief Implementation of the SpecMATSimStackingAction class
+/// \file ScintSimStackingAction.cc
+/// \brief Implementation of the ScintSimStackingAction class
 
-#include "SpecMATSimStackingAction.hh"
+#include "ScintSimStackingAction.hh"
 
 #include "G4Track.hh"
 #include "G4NeutrinoE.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-SpecMATSimStackingAction::SpecMATSimStackingAction()
+ScintSimStackingAction::ScintSimStackingAction()
 { }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-SpecMATSimStackingAction::~SpecMATSimStackingAction()
+ScintSimStackingAction::~ScintSimStackingAction()
 { }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 G4ClassificationOfNewTrack
-SpecMATSimStackingAction::ClassifyNewTrack(const G4Track* track)
+ScintSimStackingAction::ClassifyNewTrack(const G4Track* track)
 {
   //keep primary particle
   if (track->GetParentID() == 0) return fUrgent;

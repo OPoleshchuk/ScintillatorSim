@@ -1,17 +1,17 @@
-/// \file SpecMATSim.cc
-/// \brief Main program of the SpecMATSim
+/// \file ScintSim.cc
+/// \brief Main program of the ScintSim
 
 #include "G4RunManager.hh"
 #include "G4UImanager.hh"
 
 #include "Randomize.hh"
 
-#include "SpecMATSimDetectorConstruction.hh"
-#include "SpecMATSimPhysicsList.hh"
-#include "SpecMATSimPrimaryGeneratorAction.hh"
-#include "SpecMATSimRunAction.hh"
-#include "SpecMATSimEventAction.hh"
-#include "SpecMATSimStackingAction.hh"
+#include "ScintSimDetectorConstruction.hh"
+#include "ScintSimPhysicsList.hh"
+#include "ScintSimPrimaryGeneratorAction.hh"
+#include "ScintSimRunAction.hh"
+#include "ScintSimEventAction.hh"
+#include "ScintSimStackingAction.hh"
 
 #ifdef G4VIS_USE
 #include "G4VisExecutive.hh"
@@ -28,32 +28,32 @@ int main(int argc,char** argv)
   // Choose the Random engine
   //
   CLHEP::HepRandom::setTheEngine(new CLHEP::RanecuEngine);
-     
+
   // Construct the default run manager
   //
   G4RunManager * runManager = new G4RunManager;
 
   // Set mandatory initialization classes
   //
-  runManager->SetUserInitialization(new SpecMATSimDetectorConstruction);
+  runManager->SetUserInitialization(new ScintSimDetectorConstruction);
   //
-  runManager->SetUserInitialization(new SpecMATSimPhysicsList);
-    
+  runManager->SetUserInitialization(new ScintSimPhysicsList);
+
   // Set user action classes
   //
-  runManager->SetUserAction(new SpecMATSimPrimaryGeneratorAction);
+  runManager->SetUserAction(new ScintSimPrimaryGeneratorAction);
   //
-  SpecMATSimRunAction* runAction = new SpecMATSimRunAction();
+  ScintSimRunAction* runAction = new ScintSimRunAction();
   runManager->SetUserAction(runAction);
   //
-  runManager->SetUserAction(new SpecMATSimEventAction(runAction));
+  runManager->SetUserAction(new ScintSimEventAction(runAction));
   //
-  runManager->SetUserAction(new SpecMATSimStackingAction);  
-  
+  runManager->SetUserAction(new ScintSimStackingAction);
+
   // Initialize G4 kernel
   //
   runManager->Initialize();
-  
+
 #ifdef G4VIS_USE
   // Initialize visualization
   G4VisManager* visManager = new G4VisExecutive;
@@ -76,9 +76,9 @@ int main(int argc,char** argv)
 #ifdef G4UI_USE
       G4UIExecutive* ui = new G4UIExecutive(argc, argv);
 //#ifdef G4VIS_USE
-//      UImanager->ApplyCommand("/control/execute init_vis.mac"); 
+//      UImanager->ApplyCommand("/control/execute init_vis.mac");
 //#else
-//      UImanager->ApplyCommand("/control/execute init.mac"); 
+//      UImanager->ApplyCommand("/control/execute init.mac");
 //#endif
       ui->SessionStart();
       delete ui;
@@ -87,7 +87,7 @@ int main(int argc,char** argv)
 
   // Job termination
   // Free the store: user actions, physics_list and detector_description are
-  // owned and deleted by the run manager, so they should not be deleted 
+  // owned and deleted by the run manager, so they should not be deleted
   // in the main() program !
 
 #ifdef G4VIS_USE

@@ -1,7 +1,7 @@
-/// \file SpecMATSimPhysicsList.cc
-/// \brief Implementation of the SpecMATSimPhysicsList class
+/// \file ScintSimPhysicsList.cc
+/// \brief Implementation of the ScintSimPhysicsList class
 
-#include "SpecMATSimPhysicsList.hh"
+#include "ScintSimPhysicsList.hh"
 
 #include "G4DecayPhysics.hh"
 #include "G4RadioactiveDecayPhysics.hh"
@@ -9,7 +9,7 @@
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-SpecMATSimPhysicsList::SpecMATSimPhysicsList() 
+ScintSimPhysicsList::ScintSimPhysicsList()
 : G4VModularPhysicsList(){
   SetVerboseLevel(1);
 
@@ -25,16 +25,15 @@ SpecMATSimPhysicsList::SpecMATSimPhysicsList()
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-SpecMATSimPhysicsList::~SpecMATSimPhysicsList()
-{ 
+ScintSimPhysicsList::~ScintSimPhysicsList()
+{
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-void SpecMATSimPhysicsList::SetCuts()
+void ScintSimPhysicsList::SetCuts()
 {
   G4VUserPhysicsList::SetCuts();
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-

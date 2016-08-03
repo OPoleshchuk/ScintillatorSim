@@ -1,8 +1,8 @@
-/// \file SpecMATSimPhysicsList.hh
-/// \brief Definition of the SpecMATSimPhysicsList class
+/// \file ScintSimPhysicsList.hh
+/// \brief Definition of the ScintSimPhysicsList class
 
-#ifndef SpecMATSimPhysicsList_h
-#define SpecMATSimPhysicsList_h 1
+#ifndef ScintSimPhysicsList_h
+#define ScintSimPhysicsList_h 1
 
 #include "G4VModularPhysicsList.hh"
 
@@ -13,11 +13,11 @@
 /// - G4RadioactiveDecayPhysics
 /// - G4EmStandardPhysics
 
-class SpecMATSimPhysicsList: public G4VModularPhysicsList
+class ScintSimPhysicsList: public G4VModularPhysicsList
 {
 public:
-  SpecMATSimPhysicsList();
-  virtual ~SpecMATSimPhysicsList();
+  ScintSimPhysicsList();
+  virtual ~ScintSimPhysicsList();
 
   virtual void SetCuts();
 };

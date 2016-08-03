@@ -1,5 +1,5 @@
 #!/bin/bash
-./SpecMATSim SpecMATSim.in > SpecMATSim.out &
+./ScintSim ScintSim.in > ScintSim.out &
 PID=$!
 # Note: From http://stackoverflow.com/questions/12199631/convert-seconds-to-hours-minutes-seconds
 # Functions
