@@ -236,6 +236,12 @@ G4VPhysicalVolume* SpecMATSimDetectorConstruction::Construct()
                       false,                 //no boolean operation
                       0,                     //copy number
                       fCheckOverlaps);       // checking overlaps 
+  
+  G4VisAttributes* WorldVisAtt = 
+	  new G4VisAttributes(G4Colour(0.0, 0.0, 4.0));				//Instantination of visualization atributes with some color
+  WorldVisAtt->SetVisibility(true);						//Pass this object to Visualization Manager for visualization
+  WorldVisAtt->SetForceWireframe(true);					//I still believe that it might make Crystal transparent
+  logicWorld->SetVisAttributes(WorldVisAtt);				//Assignment of visualization atributes to the logical volume of the Crystal
   //############################################################################//
                 
  
