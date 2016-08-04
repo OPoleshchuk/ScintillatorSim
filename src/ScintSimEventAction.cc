@@ -108,10 +108,18 @@ void ScintSimEventAction::EndOfEventAction(const G4Event* event )
     G4cout << "\n" + crystMat->GetName() +  " Nb" << copyNb << ": " << edep/keV << " keV ";
 
 
+    if (crystMat->GetName() == "CeBr3") {
     //Resolution correction of registered gamma energy for CeBr3.
-    G4double absoEdep = G4RandGauss::shoot(edep/keV, (((edep/keV)*(108*pow(edep/keV, -0.498))/100)/2.355));
+    absoEdep = G4RandGauss::shoot(edep/keV, (((edep/keV)*(108*pow(edep/keV, -0.498))/100)/2.355));
+    }
+    else if (crystMat->GetName() == "LaBr3") {
+    //Resolution correction of registered gamma energy for LaBr3.
+    absoEdep = G4RandGauss::shoot(edep/keV, (((edep/keV)*(81*pow(edep/keV, -0.501))/100)/2.355));
+    }
 
-    //G4double absoEdep = edep/keV;
+    else {
+    absoEdep = edep/keV;
+    }
 
     // get analysis manager
     //

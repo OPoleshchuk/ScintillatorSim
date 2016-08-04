@@ -39,7 +39,10 @@ class ScintSimEventAction : public G4UserEventAction
     ScintSimDetectorConstruction* sciCryst;
     ScintSimRunAction*  fRunAct;
 
+
     G4int fCollID_cryst;
+
+    G4double absoEdep;
 
     G4GenericMessenger*  fMessenger;
     G4Material* crystMat;

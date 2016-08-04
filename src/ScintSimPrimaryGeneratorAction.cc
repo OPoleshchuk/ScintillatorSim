@@ -53,10 +53,6 @@ ScintSimPrimaryGeneratorAction::ScintSimPrimaryGeneratorAction()
   G4ParticleDefinition* particle
                     = particleTable->FindParticle("geantino");
   fParticleGun->SetParticleDefinition(particle);
-  //fParticleGun->SetParticlePosition(G4ThreeVector(0.,0.,-25.*cm));
-  //fParticleGun->SetParticleEnergy(10*MeV);
-  //fParticleGun->SetParticleMomentumDirection(G4ThreeVector(0.,1.,0.));
-
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -65,7 +61,6 @@ ScintSimPrimaryGeneratorAction::~ScintSimPrimaryGeneratorAction()
 {
   delete fParticleGun;
   delete sciCryst;
-
 }
 
 
@@ -99,24 +94,41 @@ void ScintSimPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 
   //################### Isotope source ################################//
   G4ParticleDefinition* particle = fParticleGun->GetParticleDefinition();
-  if (particle == G4Geantino::Geantino()) {
-      
+  G4String particleName = particle->GetParticleName();
+
+  //1st source
+  int randNumb = rand() % 100 + 1;            // random number within 1 - 100
+  if (21 > randNumb > 0) {                    //branching
+  crystSizeZ = sciCryst->GetSciCrystSizeZ();
     G4int Z = 27, A = 60;
     G4double ionCharge   = 0.*eplus;
     G4double excitEnergy = 0.*MeV;
-
     G4ParticleDefinition* ion
        = G4ParticleTable::GetParticleTable()->GetIon(Z,A,excitEnergy);
     fParticleGun->SetParticleDefinition(ion);
     fParticleGun->SetParticleCharge(ionCharge);
 
-
+    fParticleGun->SetParticlePosition(G4ThreeVector(0.*mm,0.*mm,-(distFromCrystSurfToSource+crystSizeZ+1.2*mm+0.8*mm)));
+    fParticleGun->SetParticleEnergy(0*MeV);
+    fParticleGun->SetParticleMomentumDirection(G4ThreeVector(1.,0.,0.));
+    fParticleGun->GeneratePrimaryVertex(anEvent);
   }
-  crystSizeZ = sciCryst->GetSciCrystSizeZ();
-  fParticleGun->SetParticlePosition(G4ThreeVector(0.*mm,0.*mm,-(distFromCrystSurfToSource+crystSizeZ+1.2*mm+0.8*mm)));
-  fParticleGun->SetParticleEnergy(0*MeV);
-  fParticleGun->SetParticleMomentumDirection(G4ThreeVector(1.,0.,0.));
-  fParticleGun->GeneratePrimaryVertex(anEvent);
+
+  else {
+    G4int Z1 = 55, A1 = 137;
+    G4double ionCharge1   = 0.*eplus;
+    G4double excitEnergy1 = 0.*MeV;
+    G4ParticleDefinition* ion1
+       = G4ParticleTable::GetParticleTable()->GetIon(Z1,A1,excitEnergy1);
+    fParticleGun->SetParticleDefinition(ion1);
+    fParticleGun->SetParticleCharge(ionCharge1);
+
+    fParticleGun->SetParticlePosition(G4ThreeVector(0.*mm,0.*mm,-(distFromCrystSurfToSource+crystSizeZ+1.2*mm+0.8*mm)));
+    fParticleGun->SetParticleEnergy(0*MeV);
+    fParticleGun->SetParticleMomentumDirection(G4ThreeVector(1.,0.,0.));
+    fParticleGun->GeneratePrimaryVertex(anEvent);
+  }
+
 
 }
 
