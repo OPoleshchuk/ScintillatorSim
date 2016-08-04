@@ -12,7 +12,7 @@
 #include "G4Geantino.hh"
 #include "G4SystemOfUnits.hh"
 #include "Randomize.hh"
-
+#include <stdlib.h>
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 ScintSimPrimaryGeneratorAction::ScintSimPrimaryGeneratorAction()
@@ -39,7 +39,7 @@ ScintSimPrimaryGeneratorAction::ScintSimPrimaryGeneratorAction()
   //fParticleGun->SetParticlePosition(G4ThreeVector(0.*mm,0.*mm,100*mm));
   */
 
-  //################### Co-60 source ################################//
+  //################### Isotope source ################################//
 
 	G4int n_particle = 1;
   fParticleGun  = new G4ParticleGun(n_particle);
@@ -97,14 +97,13 @@ void ScintSimPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   fParticleGun->GeneratePrimaryVertex(anEvent);
   */
 
-  //################### Co-60 source ################################//
+  //################### Isotope source ################################//
   G4ParticleDefinition* particle = fParticleGun->GetParticleDefinition();
   if (particle == G4Geantino::Geantino()) {
-    // Co60
-    //
-    G4int Z = 28, A = 60;
+      
+    G4int Z = 27, A = 60;
     G4double ionCharge   = 0.*eplus;
-    G4double excitEnergy = 2.*MeV;
+    G4double excitEnergy = 0.*MeV;
 
     G4ParticleDefinition* ion
        = G4ParticleTable::GetParticleTable()->GetIon(Z,A,excitEnergy);
@@ -114,7 +113,7 @@ void ScintSimPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 
   }
   crystSizeZ = sciCryst->GetSciCrystSizeZ();
-  fParticleGun->SetParticlePosition(G4ThreeVector(50.*mm,0.*mm,-(distFromCrystSurfToSource+crystSizeZ+1.2*mm+0.8*mm)));
+  fParticleGun->SetParticlePosition(G4ThreeVector(0.*mm,0.*mm,-(distFromCrystSurfToSource+crystSizeZ+1.2*mm+0.8*mm)));
   fParticleGun->SetParticleEnergy(0*MeV);
   fParticleGun->SetParticleMomentumDirection(G4ThreeVector(1.,0.,0.));
   fParticleGun->GeneratePrimaryVertex(anEvent);

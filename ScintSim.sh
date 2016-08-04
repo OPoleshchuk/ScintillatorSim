@@ -72,11 +72,11 @@ m=0
 while kill -0 $PID 2> /dev/null
     do
         showTime $m
-        showBar $i 60  #Call bar drawing function "showBar"
+        showBar $i 59  #Call bar drawing function "showBar"
         sleep $j
         i=$(( ($i+$j) ))
         m=$(( ($m+$j) ))
-        if(($i==61));then
+        if(($i==60));then
             i=0
         fi
     done
