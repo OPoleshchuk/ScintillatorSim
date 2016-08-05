@@ -8,6 +8,8 @@
 
 #include "G4Run.hh"
 #include "G4RunManager.hh"
+#include "G4ParticleGun.hh"
+#include "G4ParticleDefinition.hh"
 #include "G4UnitsTable.hh"
 #include "G4SystemOfUnits.hh"
 #include "G4Material.hh"
@@ -17,7 +19,6 @@
 
 ScintSimRunAction::ScintSimRunAction()
  : G4UserRunAction(),
-   fGoodEvents(0),
    sciCryst(0),
    gammaSource(0)
 {
@@ -39,8 +40,6 @@ void ScintSimRunAction::BeginOfRunAction(const G4Run* run)
 {
   G4cout << "### Run " << run->GetRunID() << " start." << G4endl;
 
-  fGoodEvents = 0;
-
   //inform the runManager to save random number seed
   G4RunManager::GetRunManager()->SetRandomNumberStore(false);
 
@@ -54,8 +53,8 @@ void ScintSimRunAction::BeginOfRunAction(const G4Run* run)
   // Create directories
   analysisManager->SetHistoDirectoryName("histograms");
   analysisManager->SetNtupleDirectoryName("ntuple");
-  // Open an output file
-  //
+
+  //Get strings for filename
   crystMat = sciCryst->GetSciCrystMat();
   crystMatName = crystMat->GetName();
   crystShape = sciCryst->GetSciCrystShape();
@@ -63,18 +62,28 @@ void ScintSimRunAction::BeginOfRunAction(const G4Run* run)
   crystSizeY = G4UIcommand::ConvertToString(sciCryst->GetSciCrystSizeY()*2);
   crystSizeZ = G4UIcommand::ConvertToString(sciCryst->GetSciCrystSizeZ()*2);
   crystSourceDist = G4UIcommand::ConvertToString(gammaSource->GetDistFromCrystSurfToSource());
-  gammaEnergyStr = G4UIcommand::ConvertToString(gammaSource->GetGammaEnergy());
+  numberOfEvents = G4UIcommand::ConvertToString(run->GetNumberOfEventToBeProcessed());
+
+  const ScintSimPrimaryGeneratorAction* kinematic
+    = static_cast<const ScintSimPrimaryGeneratorAction*>(
+        G4RunManager::GetRunManager()->GetUserPrimaryGeneratorAction());
+  G4ParticleDefinition* particle
+    = kinematic->GetParticleGun()->GetParticleDefinition();
+  partName = particle->GetParticleName();
+
 
   if (crystShape == "box") {
-  fileName = crystMatName+"_"+crystShape+"_"+crystSizeX+"mmx"+crystSizeY+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+gammaEnergyStr+"MeV"+"_demo"+".root";
+  fileName = crystMatName+"_"+crystShape+"_"+crystSizeX+"mmx"+crystSizeY+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt"+".root";
   }
   else if (crystShape == "cylinder") {
-  fileName = crystMatName+"_"+crystShape+"_R"+crystSizeX+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+gammaEnergyStr+"MeV"+".root";
+  fileName = crystMatName+"_"+crystShape+"_R"+crystSizeX+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt"+".root";
   }
   else {
-  fileName = "smth_went_wrong";
+  fileName = crystMatName+"_"+crystShape+crystSizeX+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt"+".root";
   }
 
+  // Open an output file
+  //
   analysisManager->OpenFile(fileName);
   analysisManager->SetFirstHistoId(1);
 
@@ -93,8 +102,8 @@ void ScintSimRunAction::BeginOfRunAction(const G4Run* run)
 
 void ScintSimRunAction::EndOfRunAction(const G4Run* aRun)
 {
-  G4int NbOfEvents = aRun->GetNumberOfEvent();
-  if (NbOfEvents == 0) return;
+  numberOfGeneratedEvents = aRun->GetNumberOfEvent();
+  if (numberOfGeneratedEvents == 0) return;
 
   //aRun conditions
   //
@@ -103,7 +112,7 @@ void ScintSimRunAction::EndOfRunAction(const G4Run* aRun)
         G4RunManager::GetRunManager()->GetUserPrimaryGeneratorAction());
   G4ParticleDefinition* particle
     = kinematic->GetParticleGun()->GetParticleDefinition();
-  G4String partName = particle->GetParticleName();
+  partName = particle->GetParticleName();
 
   // save histograms
   //
@@ -119,7 +128,7 @@ void ScintSimRunAction::EndOfRunAction(const G4Run* aRun)
   //
   G4cout
      << "\n--------------------End of Run------------------------------\n"
-     << " The Run was " << NbOfEvents << " "<< partName
+     << " The Run was " << numberOfGeneratedEvents << " "<< partName
      << "\n------------------------------------------------------------\n"
      << G4endl;
 }

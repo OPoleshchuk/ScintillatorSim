@@ -41,18 +41,19 @@ ScintSimPrimaryGeneratorAction::ScintSimPrimaryGeneratorAction()
 
   //################### Isotope source ################################//
 
-	G4int n_particle = 1;
+  G4int n_particle = 1;
   fParticleGun  = new G4ParticleGun(n_particle);
   sciCryst = new ScintSimDetectorConstruction();
 
   distFromCrystSurfToSource = 20*mm;
-  gammaEnergy = 0.01*keV;
+  //gammaEnergy = 0.01*keV;
   // default particle kinematic
-
+  /*
   G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
   G4ParticleDefinition* particle
                     = particleTable->FindParticle("geantino");
   fParticleGun->SetParticleDefinition(particle);
+  */
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -93,9 +94,7 @@ void ScintSimPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   */
 
   //################### Isotope source ################################//
-  G4ParticleDefinition* particle = fParticleGun->GetParticleDefinition();
-  G4String particleName = particle->GetParticleName();
-
+  
   //1st source
   int randNumb = rand() % 100 + 1;            // random number within 1 - 100
   if (21 > randNumb > 0) {                    //branching

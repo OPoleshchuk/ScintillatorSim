@@ -22,9 +22,6 @@ class ScintSimRunAction : public G4UserRunAction
     virtual void BeginOfRunAction(const G4Run*);
     virtual void   EndOfRunAction(const G4Run*);
 
-    void CountEvents() { fGoodEvents++;};
-
-    G4int fGoodEvents;
 
   private:
     ScintSimDetectorConstruction* sciCryst;
@@ -39,6 +36,9 @@ class ScintSimRunAction : public G4UserRunAction
     G4String crystShape;
     G4String gammaEnergyStr;
     G4String crystSourceDist;
+    G4String numberOfEvents;
+    G4String partName;
+    G4int numberOfGeneratedEvents;
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

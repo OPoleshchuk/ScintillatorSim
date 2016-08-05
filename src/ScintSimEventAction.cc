@@ -71,7 +71,7 @@ G4double ScintSimEventAction::GetSum(G4THitsMap<G4double>* hitsMap) const
 void ScintSimEventAction::BeginOfEventAction(const G4Event* event )
 {
   G4int eventNb = event->GetEventID();
-  G4cout << "Event №" << eventNb << G4endl;
+  G4cout << "\nEvent №" << eventNb << G4endl;
 
   if (eventNb == 0) {
     G4SDManager* SDMan = G4SDManager::GetSDMpointer();
@@ -105,7 +105,7 @@ void ScintSimEventAction::EndOfEventAction(const G4Event* event )
     G4double edep = *(itr->second);
     if (edep > eThreshold) nbOfFired++;
     crystMat = sciCryst->GetSciCrystMat();
-    G4cout << "\n" + crystMat->GetName() +  " Nb" << copyNb << ": " << edep/keV << " keV ";
+    G4cout << crystMat->GetName() +  " Nb" << copyNb << ": " << edep/keV << " keV " << G4endl;
 
 
     if (crystMat->GetName() == "CeBr3") {
