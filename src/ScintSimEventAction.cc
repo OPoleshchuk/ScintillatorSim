@@ -132,6 +132,7 @@ void ScintSimEventAction::EndOfEventAction(const G4Event* event )
     // fill ntuple
     //
     analysisManager->FillNtupleDColumn(0, absoEdep);
+    analysisManager->FillNtupleDColumn(1, edep/keV);
     analysisManager->AddNtupleRow();
   }
 }

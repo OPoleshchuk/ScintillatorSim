@@ -74,13 +74,13 @@ void ScintSimRunAction::BeginOfRunAction(const G4Run* run)
 
 
   if (crystShape == "box") {
-  fileName = crystMatName+"_"+crystShape+"_"+crystSizeX+"mmx"+crystSizeY+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt_"+"E="+gammaEnergyStr+".root";
+  fileName = crystMatName+"_"+crystShape+"_"+crystSizeX+"mmx"+crystSizeY+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt_"+"E="+gammaEnergyStr+"MeV"+".root";
   }
   else if (crystShape == "cylinder") {
-  fileName = crystMatName+"_"+crystShape+"_R"+crystSizeX+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt_"+"E="+gammaEnergyStr+".root";
+  fileName = crystMatName+"_"+crystShape+"_R"+crystSizeX+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt_"+"E="+gammaEnergyStr+"MeV"+".root";
   }
   else {
-  fileName = crystMatName+"_"+crystShape+crystSizeX+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt_"+"E="+gammaEnergyStr+".root";
+  fileName = crystMatName+"_"+crystShape+crystSizeX+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt_"+"E="+gammaEnergyStr+"MeV"+".root";
   }
 
   // Open an output file
@@ -90,12 +90,13 @@ void ScintSimRunAction::BeginOfRunAction(const G4Run* run)
 
   // Creating histograms
   //
-  analysisManager->CreateH1("1","Edep in crystal", 15501, 0., 15500*MeV);
+  analysisManager->CreateH1("EdepRes","Edep in crystal", 15501, 0., 15500*MeV);
 
   // Creating ntuple
   //
   analysisManager->CreateNtuple("Edep_in_crystal", "Edep in crystal");
-  analysisManager->CreateNtupleDColumn("Edep");
+  analysisManager->CreateNtupleDColumn("EdepRes");
+  analysisManager->CreateNtupleDColumn("EdepNoRes");
   analysisManager->FinishNtuple();
 }
 
