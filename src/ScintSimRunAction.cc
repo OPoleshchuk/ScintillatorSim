@@ -63,6 +63,7 @@ void ScintSimRunAction::BeginOfRunAction(const G4Run* run)
   crystSizeZ = G4UIcommand::ConvertToString(sciCryst->GetSciCrystSizeZ()*2);
   crystSourceDist = G4UIcommand::ConvertToString(gammaSource->GetDistFromCrystSurfToSource());
   numberOfEvents = G4UIcommand::ConvertToString(run->GetNumberOfEventToBeProcessed());
+  gammaEnergyStr = G4UIcommand::ConvertToString(gammaSource->GetGammaEnergy());
 
   const ScintSimPrimaryGeneratorAction* kinematic
     = static_cast<const ScintSimPrimaryGeneratorAction*>(
@@ -73,13 +74,13 @@ void ScintSimRunAction::BeginOfRunAction(const G4Run* run)
 
 
   if (crystShape == "box") {
-  fileName = crystMatName+"_"+crystShape+"_"+crystSizeX+"mmx"+crystSizeY+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt"+".root";
+  fileName = crystMatName+"_"+crystShape+"_"+crystSizeX+"mmx"+crystSizeY+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt_"+"E="+gammaEnergyStr+".root";
   }
   else if (crystShape == "cylinder") {
-  fileName = crystMatName+"_"+crystShape+"_R"+crystSizeX+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt"+".root";
+  fileName = crystMatName+"_"+crystShape+"_R"+crystSizeX+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt_"+"E="+gammaEnergyStr+".root";
   }
   else {
-  fileName = crystMatName+"_"+crystShape+crystSizeX+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt"+".root";
+  fileName = crystMatName+"_"+crystShape+crystSizeX+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt_"+"E="+gammaEnergyStr+".root";
   }
 
   // Open an output file
