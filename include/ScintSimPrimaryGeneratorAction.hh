@@ -20,6 +20,16 @@ class ScintSimDetectorConstruction;
 class ScintSimPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 {
   public:
+
+    G4int Z;
+    G4int A;
+    G4int n_particle;
+    G4double ionCharge;
+    G4double excitEnergy;
+    G4double ionEnergy;
+    G4String source;
+    G4int randomNum;
+
     ScintSimPrimaryGeneratorAction();
     virtual ~ScintSimPrimaryGeneratorAction();
 
@@ -32,6 +42,25 @@ class ScintSimPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 
     void SetGammaEnergy(G4double val) { gammaEnergy = val; }
     G4double GetGammaEnergy(void) { return gammaEnergy;}
+
+    void SetZ(G4double val) { Z = val; }
+    G4double GetZ(void) { return Z;}
+
+    void SetA(G4double val) { A = val; }
+    G4double GetA(void) { return A;}
+
+    void SetIonCharge(G4double val) { ionCharge = val; }
+    G4double GetIonCharge(void) { return ionCharge;}
+
+    void SetExcitEnergy(G4double val) { excitEnergy = val; }
+    G4double GetExcitEnergy(void) { return excitEnergy;}
+
+    void SetIonEnergy(G4double val) { ionEnergy = val; }
+    G4double GetIonEnergy(void) { return ionEnergy;}
+
+    void SetSource(G4String val) { source = val; }
+    G4String GetSource(void) { return source;}
+
   private:
     ScintSimDetectorConstruction* sciCryst;
 
