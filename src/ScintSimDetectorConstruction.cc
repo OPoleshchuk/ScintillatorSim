@@ -51,12 +51,12 @@ ScintSimDetectorConstruction::ScintSimDetectorConstruction()
   //--------------------------------------------------------//
   //Dimensions of the crystal (half-side)//
 
-  //sciCrystShape = "box";
-  sciCrystShape = "cylinder";
+  sciCrystShape = "box";
+  //sciCrystShape = "cylinder";
 
-  sciCrystSizeX = 1.5*25*mm;					//All components are depends on Crystal size, Qartz window size Z, sciReflWindThick and sciHousWindThick, SizeX also is used as radius
-  sciCrystSizeY = 1.5*25*mm;					//This dimension is not used for cylindrical shape
-  sciCrystSizeZ = 1.5*25*mm;
+  sciCrystSizeX = 24*mm;					//All components are depends on Crystal size, Qartz window size Z, sciReflWindThick and sciHousWindThick, SizeX also is used as radius
+  sciCrystSizeY = 24*mm;					//This dimension is not used for cylindrical shape
+  sciCrystSizeZ = 24*mm;
 
   //Define LaBr3 material and its compounds//
   La =
@@ -161,7 +161,7 @@ ScintSimDetectorConstruction::ScintSimDetectorConstruction()
   //Dimensions of reflector (half-side)//
   sciReflWallThickX = 0.5*mm;
   sciReflWallThickY = 0.5*mm;
-  sciReflWindThick = 1.2*mm;
+  sciReflWindThick = 0.5*mm;
 
   //Define Reflector (white powder TiO2) material and its compounds//
   Ti =
@@ -181,9 +181,9 @@ ScintSimDetectorConstruction::ScintSimDetectorConstruction()
   //******************** Aluminum Housing ******************//
   //--------------------------------------------------------//
   //Dimensions of Housing (half-side)//
-  sciHousWallThickX = 3.5*mm;
-  sciHousWallThickY = 3.5*mm;
-  sciHousWindThick = 0.8*mm;
+  sciHousWallThickX = 3*mm;
+  sciHousWallThickY = 3*mm;
+  sciHousWindThick = 1*mm;
 
   //Define Housing material and its compounds//
   Al =
