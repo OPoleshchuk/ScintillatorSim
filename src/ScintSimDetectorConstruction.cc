@@ -40,6 +40,19 @@ ScintSimDetectorConstruction::ScintSimDetectorConstruction()
   G4NistManager* nist = G4NistManager::Instance();
   default_mat = nist->FindOrBuildMaterial("G4_AIR", false);
 
+  a = 14.01*g/mole;
+  G4Element* elN  = new G4Element("Nitrogen","N" , z= 7., a);
+
+  a = 16.00*g/mole;
+  G4Element* elO  = new G4Element("Oxygen"  ,"O" , z= 8., a);
+
+  G4double densityAirInLab = 1.290*mg/cm3;
+  G4double pressureAirInLab    = 1.*atmosphere;
+  G4double temperatureAirInLab = 294.*kelvin;
+  AirInLab = new G4Material("AirInLab"  , densityAirInLab, ncomponents=2, kStateGas,temperatureAirInLab,pressureAirInLab);
+  AirInLab->AddElement(elN, 0.7);
+  AirInLab->AddElement(elO, 0.3);
+
 
   //****************************************************************************//
   //******************* CeBr3 scintillator 1.5"x1.5"x1.5" **********************//
@@ -59,6 +72,7 @@ ScintSimDetectorConstruction::ScintSimDetectorConstruction()
   sciCrystSizeZ = 24*mm;
 
   //Define LaBr3 material and its compounds//
+
   La =
 	  new G4Element("Lanthanum",
 		  	"La",
@@ -79,9 +93,10 @@ ScintSimDetectorConstruction::ScintSimDetectorConstruction()
   LaBr3->AddElement (La, natoms=1);
   LaBr3->AddElement (Br, natoms=3);
 
-  sciCrystMat = LaBr3;
+  //sciCrystMat = LaBr3;
 
-  /*
+
+
   //Define NaI material and its compounds//
   Na =
 	  new G4Element("Sodium",
@@ -103,9 +118,10 @@ ScintSimDetectorConstruction::ScintSimDetectorConstruction()
   NaI->AddElement (I, natoms=1);
 
   sciCrystMat = NaI;
-  */
-  /*
+
+
   //Define CeBr3 material and its compounds//
+  /*
   Ce =
 	  new G4Element("Cerium",
 		  	"Ce",
@@ -125,8 +141,8 @@ ScintSimDetectorConstruction::ScintSimDetectorConstruction()
   CeBr3->AddElement (Ce, natoms=1);
   CeBr3->AddElement (Br, natoms=3);
 
-  sciCrystMat = CeBr3;
-  */
+  sciCrystMat = CeBr3; */
+
   //--------------------------------------------------------//
   //******************** Quartz window *********************//
   //--------------------------------------------------------//
@@ -224,7 +240,7 @@ G4VPhysicalVolume* ScintSimDetectorConstruction::Construct()
 
   G4LogicalVolume* logicWorld =
     new G4LogicalVolume(solidWorld,          //its solid
-                        default_mat,         //its material
+                        AirInLab,         //its material
                         "World");            //its name
 
   G4VPhysicalVolume* physWorld =

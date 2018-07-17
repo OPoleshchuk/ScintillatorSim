@@ -60,6 +60,7 @@ class ScintSimDetectorConstruction : public G4VUserDetectorConstruction
     G4Material* Quartz;
     G4Material* TiO2;
     G4Material* Al_Alloy;
+    G4Material* AirInLab;
 
     G4String sciCrystShape;
 
