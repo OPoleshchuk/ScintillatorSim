@@ -53,7 +53,7 @@ void ScintSimRunAction::BeginOfRunAction(const G4Run* run)
   // Create directories
   analysisManager->SetHistoDirectoryName("histograms");
   analysisManager->SetNtupleDirectoryName("ntuple");
-
+  /*
   //Get strings for filename
   crystMat = sciCryst->GetSciCrystMat();
   crystMatName = crystMat->GetName();
@@ -82,9 +82,10 @@ void ScintSimRunAction::BeginOfRunAction(const G4Run* run)
   else {
   fileName = crystMatName+"_"+crystShape+crystSizeX+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt_"+"E="+gammaEnergyStr+"MeV"+".root";
   }
-
+  */
   // Open an output file
   //
+  fileName = "gdml_test.root";
   analysisManager->OpenFile(fileName);
   analysisManager->SetFirstHistoId(1);
 

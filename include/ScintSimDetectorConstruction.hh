@@ -7,6 +7,7 @@
 #include "G4Material.hh"
 #include "G4VUserDetectorConstruction.hh"
 #include "globals.hh"
+#include "G4GDMLParser.hh"
 
 class G4VPhysicalVolume;
 class G4LogicalVolume;
@@ -19,6 +20,7 @@ class ScintSimDetectorConstruction : public G4VUserDetectorConstruction
   private:
     void DefineMaterials();
     void CreateScorers();
+    void GetCol();
 
     G4double a, z, density;
     G4int natoms, ncomponents;
@@ -62,13 +64,19 @@ class ScintSimDetectorConstruction : public G4VUserDetectorConstruction
     G4Material* Al_Alloy;
     G4Material* AirInLab;
 
+
     G4String sciCrystShape;
 
     G4LogicalVolume*  fLogicCryst;
 
     G4bool  fCheckOverlaps;
 
+    G4GDMLParser fParser;
+    G4String fReadFile;
+
   public:
+
+
     ScintSimDetectorConstruction();
     virtual ~ScintSimDetectorConstruction();
 

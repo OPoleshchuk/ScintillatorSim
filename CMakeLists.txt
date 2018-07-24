@@ -57,6 +57,10 @@ foreach(_script ${ScintSIM_SCRIPTS})
 endforeach()
 
 #----------------------------------------------------------------------------
+# Copy all geometry files to the build directory
+file(COPY ${PROJECT_SOURCE_DIR}/geometry DESTINATION ${CMAKE_BINARY_DIR})
+
+#----------------------------------------------------------------------------
 # For internal Geant4 use - but has no effect if you build this
 # example standalone
 #

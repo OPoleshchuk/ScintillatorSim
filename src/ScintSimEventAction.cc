@@ -104,14 +104,14 @@ void ScintSimEventAction::EndOfEventAction(const G4Event* event )
     G4int copyNb  = (itr->first);
     G4double edep = *(itr->second);
     if (edep > eThreshold) nbOfFired++;
-    crystMat = sciCryst->GetSciCrystMat();
-    G4cout << crystMat->GetName() +  " Nb" << copyNb << ": " << edep/keV << " keV " << G4endl;
+    //crystMat = sciCryst->GetSciCrystMat();
+    G4cout <<  edep/keV << " keV " << G4endl;
 
 
-    if (crystMat->GetName() == "CeBr3") {
+    //if (crystMat->GetName() == "CeBr3") {
     //Resolution correction of registered gamma energy for CeBr3.
     absoEdep = G4RandGauss::shoot(edep/keV, (((edep/keV)*(108*pow(edep/keV, -0.498))/100)/2.355));
-    }
+    /*}
     else if (crystMat->GetName() == "LaBr3") {
     //Resolution correction of registered gamma energy for LaBr3.
     absoEdep = G4RandGauss::shoot(edep/keV, (((edep/keV)*(81*pow(edep/keV, -0.501))/100)/2.355));
@@ -120,7 +120,7 @@ void ScintSimEventAction::EndOfEventAction(const G4Event* event )
     else {
     absoEdep = edep/keV;
     }
-
+    */
     // get analysis manager
     //
     G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();

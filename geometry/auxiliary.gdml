@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+ <define>
+  <position name="R" unit="mm" x="0" y="0" z="0" />
+  <rotation name="V" unit="degree" x="10" y="20" z="30" />
+  <variable name="veloSD" value="4" />
+ </define>
+
+ <materials>
+  <element name="bromine"    formula="Br"  Z="35">   <atom value="79.904"/>   </element>
+  <element name="cerium"    formula="Ce"  Z="58">   <atom value="140.116"/>  </element>
+  <element name="nitrogen"   formula="N"   Z="7">    <atom value="14.0067"/>  </element>
+  <element name="oxygen"     formula="O"   Z="8">    <atom value="15.999"/>   </element>
+  <!-- CeBr3 -->
+  <material name="CeBr3" formula="CeBr3">
+      <D value="5.1" unit="g/cm3"/>
+      <composite n="1" ref="cerium"/>
+      <composite n="3" ref="bromine"/>
+  </material>
+  <!-- Air -->
+  <material formula=" " name="Air" >
+   <D value="0.0012" />
+   <fraction n="0.7" ref="nitrogen" />
+   <fraction n="0.3" ref="oxygen" />
+  </material>
+ </materials>
+
+ <solids>
+  <box lunit="mm" name="Box" x="48" y="48" z="48" />
+  <box lunit="mm" name="WorldBox" x="300" y="300" z="300" />
+ </solids>
+
+ <structure>
+  <volume name="Boxvol" >
+   <materialref ref="CeBr3" />
+   <solidref ref="Box" />
+   <auxiliary auxtype="SensDet" auxvalue="crystal"/>
+   <auxiliary auxtype="Color" auxvalue="Blue"/>
+  </volume>
+  <volume name="World" >
+   <materialref ref="Air" />
+   <solidref ref="WorldBox" />
+   <physvol>
+    <volumeref ref="Boxvol" />
+    <positionref ref="R"  />
+    <rotationref ref="V" />
+   </physvol>
+  </volume>
+ </structure>
+
+ <setup name="Default" version="1.0" >
+  <world ref="World" />
+ </setup>
+</gdml>

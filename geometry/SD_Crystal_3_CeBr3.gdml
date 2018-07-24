@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+    <define>
+        <position name="SD_Crystal_3_CeBr3_v0" unit="cm" x="-2.4" y="0.4" z="-2.4"/>
+        <position name="SD_Crystal_3_CeBr3_v1" unit="cm" x="-2.4" y="0.4" z="2.4"/>
+        <position name="SD_Crystal_3_CeBr3_v2" unit="cm" x="-2.4" y="5.2" z="-2.4"/>
+        <position name="SD_Crystal_3_CeBr3_v3" unit="cm" x="-2.4" y="5.2" z="2.4"/>
+        <position name="SD_Crystal_3_CeBr3_v4" unit="cm" x="2.4" y="0.4" z="-2.4"/>
+        <position name="SD_Crystal_3_CeBr3_v5" unit="cm" x="2.4" y="5.2" z="-2.4"/>
+        <position name="SD_Crystal_3_CeBr3_v6" unit="cm" x="2.4" y="0.4" z="2.4"/>
+        <position name="SD_Crystal_3_CeBr3_v7" unit="cm" x="2.4" y="5.2" z="2.4"/>
+    </define>
+
+    <solids>
+        <tessellated aunit="deg" lunit="cm" name="SD_Crystal_3_CeBr3-SOL">
+             <triangular vertex1="SD_Crystal_3_CeBr3_v0" vertex2="SD_Crystal_3_CeBr3_v1" vertex3="SD_Crystal_3_CeBr3_v2"/>
+             <triangular vertex1="SD_Crystal_3_CeBr3_v2" vertex2="SD_Crystal_3_CeBr3_v1" vertex3="SD_Crystal_3_CeBr3_v3"/>
+             <triangular vertex1="SD_Crystal_3_CeBr3_v4" vertex2="SD_Crystal_3_CeBr3_v0" vertex3="SD_Crystal_3_CeBr3_v5"/>
+             <triangular vertex1="SD_Crystal_3_CeBr3_v5" vertex2="SD_Crystal_3_CeBr3_v0" vertex3="SD_Crystal_3_CeBr3_v2"/>
+             <triangular vertex1="SD_Crystal_3_CeBr3_v6" vertex2="SD_Crystal_3_CeBr3_v4" vertex3="SD_Crystal_3_CeBr3_v7"/>
+             <triangular vertex1="SD_Crystal_3_CeBr3_v7" vertex2="SD_Crystal_3_CeBr3_v4" vertex3="SD_Crystal_3_CeBr3_v5"/>
+             <triangular vertex1="SD_Crystal_3_CeBr3_v1" vertex2="SD_Crystal_3_CeBr3_v6" vertex3="SD_Crystal_3_CeBr3_v3"/>
+             <triangular vertex1="SD_Crystal_3_CeBr3_v3" vertex2="SD_Crystal_3_CeBr3_v6" vertex3="SD_Crystal_3_CeBr3_v7"/>
+             <triangular vertex1="SD_Crystal_3_CeBr3_v1" vertex2="SD_Crystal_3_CeBr3_v0" vertex3="SD_Crystal_3_CeBr3_v6"/>
+             <triangular vertex1="SD_Crystal_3_CeBr3_v6" vertex2="SD_Crystal_3_CeBr3_v0" vertex3="SD_Crystal_3_CeBr3_v4"/>
+             <triangular vertex1="SD_Crystal_3_CeBr3_v7" vertex2="SD_Crystal_3_CeBr3_v5" vertex3="SD_Crystal_3_CeBr3_v3"/>
+             <triangular vertex1="SD_Crystal_3_CeBr3_v3" vertex2="SD_Crystal_3_CeBr3_v5" vertex3="SD_Crystal_3_CeBr3_v2"/>
+        </tessellated>
+    </solids>
+
+    <structure>
+        <volume name="SD_Crystal_3_CeBr3">
+            <materialref ref="CeBr3"/>
+			<auxiliary auxtype="Color" auxvalue="Blue"/>
+			<auxiliary auxtype="SensDet" auxvalue="crystal"/>
+            <solidref ref="SD_Crystal_3_CeBr3-SOL"/>
+        </volume>
+    </structure>
+
+    <setup name="Default" version="1.0">
+        <world ref="SD_Crystal_3_CeBr3"/>
+    </setup>
+</gdml>

@@ -32,7 +32,7 @@ ScintSimPrimaryGeneratorAction::ScintSimPrimaryGeneratorAction()
  gammaEnergy=511*keV;
  crystSizeZ = sciCryst->GetSciCrystSizeZ();
 
- distFromCrystSurfToSource = 55*mm;
+ distFromCrystSurfToSource = 100*mm;
 
  //################### Isotope source ################################//
  Z = 55;
@@ -75,7 +75,8 @@ void ScintSimPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
      randomNum = G4UniformRand()*201 - 100;
 
      fParticleGun->SetParticleMomentumDirection(G4ThreeVector(ux,uy,uz));
-     fParticleGun->SetParticlePosition(G4ThreeVector(0.*mm,0.*mm,-(distFromCrystSurfToSource+crystSizeZ+1.2*mm+0.8*mm)));
+     fParticleGun->SetParticlePosition(G4ThreeVector(0.*mm,-distFromCrystSurfToSource,0.*mm));
+     //fParticleGun->SetParticlePosition(G4ThreeVector(0.*mm,0.*mm,0.*mm));
      fParticleGun->GeneratePrimaryVertex(anEvent);
  } else {
      //################### Isotope source ################################//

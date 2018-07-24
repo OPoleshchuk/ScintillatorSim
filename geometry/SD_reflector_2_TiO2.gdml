@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+    <define>
+        <position name="SD_reflector_2_TiO2_v0" unit="cm" x="2.4" y="5.3" z="2.4"/>
+        <position name="SD_reflector_2_TiO2_v1" unit="cm" x="2.4" y="5.3" z="-2.4"/>
+        <position name="SD_reflector_2_TiO2_v2" unit="cm" x="2.4" y="0.4" z="2.4"/>
+        <position name="SD_reflector_2_TiO2_v3" unit="cm" x="2.4" y="0.4" z="-2.4"/>
+        <position name="SD_reflector_2_TiO2_v4" unit="cm" x="-2.4" y="5.3" z="-2.4"/>
+        <position name="SD_reflector_2_TiO2_v5" unit="cm" x="-2.4" y="0.4" z="-2.4"/>
+        <position name="SD_reflector_2_TiO2_v6" unit="cm" x="-2.4" y="5.3" z="2.4"/>
+        <position name="SD_reflector_2_TiO2_v7" unit="cm" x="-2.4" y="0.4" z="2.4"/>
+        <position name="SD_reflector_2_TiO2_v8" unit="cm" x="-2.45" y="0.1" z="-2.45"/>
+        <position name="SD_reflector_2_TiO2_v9" unit="cm" x="-2.45" y="0.1" z="2.45"/>
+        <position name="SD_reflector_2_TiO2_v10" unit="cm" x="-2.45" y="5.3" z="-2.45"/>
+        <position name="SD_reflector_2_TiO2_v11" unit="cm" x="-2.45" y="5.3" z="2.45"/>
+        <position name="SD_reflector_2_TiO2_v12" unit="cm" x="2.45" y="0.1" z="-2.45"/>
+        <position name="SD_reflector_2_TiO2_v13" unit="cm" x="2.45" y="5.3" z="-2.45"/>
+        <position name="SD_reflector_2_TiO2_v14" unit="cm" x="2.45" y="0.1" z="2.45"/>
+        <position name="SD_reflector_2_TiO2_v15" unit="cm" x="2.45" y="5.3" z="2.45"/>
+    </define>
+
+    <solids>
+        <tessellated aunit="deg" lunit="cm" name="SD_reflector_2_TiO2-SOL">
+             <triangular vertex1="SD_reflector_2_TiO2_v0" vertex2="SD_reflector_2_TiO2_v1" vertex3="SD_reflector_2_TiO2_v2"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v2" vertex2="SD_reflector_2_TiO2_v1" vertex3="SD_reflector_2_TiO2_v3"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v1" vertex2="SD_reflector_2_TiO2_v4" vertex3="SD_reflector_2_TiO2_v3"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v3" vertex2="SD_reflector_2_TiO2_v4" vertex3="SD_reflector_2_TiO2_v5"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v4" vertex2="SD_reflector_2_TiO2_v6" vertex3="SD_reflector_2_TiO2_v5"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v5" vertex2="SD_reflector_2_TiO2_v6" vertex3="SD_reflector_2_TiO2_v7"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v6" vertex2="SD_reflector_2_TiO2_v0" vertex3="SD_reflector_2_TiO2_v7"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v7" vertex2="SD_reflector_2_TiO2_v0" vertex3="SD_reflector_2_TiO2_v2"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v2" vertex2="SD_reflector_2_TiO2_v3" vertex3="SD_reflector_2_TiO2_v7"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v7" vertex2="SD_reflector_2_TiO2_v3" vertex3="SD_reflector_2_TiO2_v5"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v8" vertex2="SD_reflector_2_TiO2_v9" vertex3="SD_reflector_2_TiO2_v10"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v10" vertex2="SD_reflector_2_TiO2_v9" vertex3="SD_reflector_2_TiO2_v11"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v12" vertex2="SD_reflector_2_TiO2_v8" vertex3="SD_reflector_2_TiO2_v13"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v13" vertex2="SD_reflector_2_TiO2_v8" vertex3="SD_reflector_2_TiO2_v10"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v14" vertex2="SD_reflector_2_TiO2_v12" vertex3="SD_reflector_2_TiO2_v15"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v15" vertex2="SD_reflector_2_TiO2_v12" vertex3="SD_reflector_2_TiO2_v13"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v9" vertex2="SD_reflector_2_TiO2_v14" vertex3="SD_reflector_2_TiO2_v11"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v11" vertex2="SD_reflector_2_TiO2_v14" vertex3="SD_reflector_2_TiO2_v15"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v9" vertex2="SD_reflector_2_TiO2_v8" vertex3="SD_reflector_2_TiO2_v14"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v14" vertex2="SD_reflector_2_TiO2_v8" vertex3="SD_reflector_2_TiO2_v12"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v0" vertex2="SD_reflector_2_TiO2_v13" vertex3="SD_reflector_2_TiO2_v1"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v1" vertex2="SD_reflector_2_TiO2_v13" vertex3="SD_reflector_2_TiO2_v10"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v1" vertex2="SD_reflector_2_TiO2_v10" vertex3="SD_reflector_2_TiO2_v4"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v4" vertex2="SD_reflector_2_TiO2_v10" vertex3="SD_reflector_2_TiO2_v11"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v4" vertex2="SD_reflector_2_TiO2_v11" vertex3="SD_reflector_2_TiO2_v6"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v6" vertex2="SD_reflector_2_TiO2_v11" vertex3="SD_reflector_2_TiO2_v0"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v0" vertex2="SD_reflector_2_TiO2_v11" vertex3="SD_reflector_2_TiO2_v15"/>
+             <triangular vertex1="SD_reflector_2_TiO2_v0" vertex2="SD_reflector_2_TiO2_v15" vertex3="SD_reflector_2_TiO2_v13"/>
+        </tessellated>
+    </solids>
+
+    <structure>
+        <volume name="SD_reflector_2_TiO2">
+            <materialref ref="TiO2"/>
+			<auxiliary auxtype="Color" auxvalue="Yellow"/>
+            <solidref ref="SD_reflector_2_TiO2-SOL"/>
+        </volume>
+    </structure>
+
+    <setup name="Default" version="1.0">
+        <world ref="SD_reflector_2_TiO2"/>
+    </setup>
+</gdml>
