@@ -29,6 +29,7 @@ class ScintSimPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
     G4double ionEnergy;
     G4String source;
     G4int randomNum;
+    G4double distFromCrystSurfToSource;
 
     ScintSimPrimaryGeneratorAction();
     virtual ~ScintSimPrimaryGeneratorAction();
@@ -67,7 +68,7 @@ class ScintSimPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
     G4ParticleGun*  fParticleGun;
 
     G4double crystSizeZ;
-    G4double distFromCrystSurfToSource;
+
     G4double gammaEnergy;
 };
 

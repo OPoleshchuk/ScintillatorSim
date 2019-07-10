@@ -1,23 +1,22 @@
 #!/bin/bash
-iterator=1000
-while [ $iterator -le 3000 ]
+iterator=10
+while [ $iterator -le 10000 ]
 do
 ba="gammaEnergy="
 ca=$iterator
 
 ea=$ba$ca
 
-if [ $iterator -lt 200 ]
+if [ $iterator -lt 300 ]
 then
 	((iterator=iterator+10))
-elif [ $iterator -ge 200 ] && [ $iterator -lt 1000 ]
+elif [ $iterator -ge 300 ] && [ $iterator -lt 2000 ]
 then
-	((iterator=iterator+100))
-elif [ $iterator -ge 1000 ]
+	((iterator=iterator+50))
+elif [ $iterator -ge 2000 ]
 then
 	((iterator=iterator+1000))
 fi
-
 
 cb=$iterator
 eb=$ba$cb

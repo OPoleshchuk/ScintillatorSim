@@ -101,7 +101,7 @@ void ScintSimEventAction::EndOfEventAction(const G4Event* event )
 
   std::map<G4int,G4double*>::iterator itr;
   for (itr = eventMap->GetMap()->begin(); itr != eventMap->GetMap()->end(); itr++) {
-    G4int copyNb  = (itr->first);
+    //G4int copyNb  = (itr->first);
     G4double edep = *(itr->second);
     if (edep > eThreshold) nbOfFired++;
     //crystMat = sciCryst->GetSciCrystMat();

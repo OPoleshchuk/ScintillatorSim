@@ -85,13 +85,18 @@ void ScintSimRunAction::BeginOfRunAction(const G4Run* run)
   */
   // Open an output file
   //
-  fileName = "gdml_test.root";
+  //fileName = "gdml_test.root";
+  numberOfEvents = G4UIcommand::ConvertToString(run->GetNumberOfEventToBeProcessed());
+  gammaEnergyStr = G4UIcommand::ConvertToString(gammaSource->GetGammaEnergy());
+  sourceDist = G4UIcommand::ConvertToString(gammaSource->GetDistFromCrystSurfToSource());
+  fileName = std::string("CeBr3")+"_"+sourceDist+"mm_"+numberOfEvents+"evnt_"+gammaEnergyStr+"MeV"+".root";
+  //fileName = Form("CeBr3_%sevnt_E=%sMeV.root", numberOfEvents, gammaEnergyStr);
   analysisManager->OpenFile(fileName);
   analysisManager->SetFirstHistoId(1);
 
   // Creating histograms
   //
-  analysisManager->CreateH1("EdepRes","Edep in crystal", 15501, 0., 15500*MeV);
+  analysisManager->CreateH1("EdepRes","Edep in crystal", 15500, 0., 15500*MeV);
 
   // Creating ntuple
   //

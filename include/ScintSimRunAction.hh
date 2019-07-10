@@ -38,6 +38,7 @@ class ScintSimRunAction : public G4UserRunAction
     G4String crystSourceDist;
     G4String numberOfEvents;
     G4String partName;
+    G4String sourceDist;
     G4int numberOfGeneratedEvents;
 };
 
