@@ -59,7 +59,7 @@
         <!-- Air   -->
         <!--          -->
         <material formula=" " name="Air" >
-         <D value="0.0012" />
+         <D value="0.0012" unit="g/cm3" />
          <fraction n="0.7" ref="nitrogen" />
          <fraction n="0.3" ref="oxygen" />
         </material>

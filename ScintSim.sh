@@ -18,12 +18,13 @@ then
 	((iterator=iterator+1000))
 fi
 
+
 cb=$iterator
 eb=$ba$cb
 
 ga="s/$ea/$eb/g"
 # !!!!!  The path should be changed in accordance to the SpecMATSimPrimaryGeneratorAction.cc file location  !!!!!
-sed -i ".original" "s/$ea/$eb/g" /Users/Gellemar/ScintillatorSim/src/ScintSimPrimaryGeneratorAction.cc
+sed -i "s/$ea/$eb/g" /mnt/ksf2/H1/user/u0107893/linux/ScintillatorSim/src/ScintSimPrimaryGeneratorAction.cc
 
 make -j4
 ./ScintSim ScintSim.in > ScintSim.out &

@@ -29,7 +29,7 @@ ScintSimPrimaryGeneratorAction::ScintSimPrimaryGeneratorAction()
  n_particle = 1;
  fParticleGun  = new G4ParticleGun(n_particle);
  sciCryst = new ScintSimDetectorConstruction();
- gammaEnergy=10*keV;
+ gammaEnergy=11000*keV;
  crystSizeZ = sciCryst->GetSciCrystSizeZ();
 
  distFromCrystSurfToSource = 131.25*mm;
@@ -87,7 +87,7 @@ void ScintSimPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 
      //randomNum = G4UniformRand()*201 - 100;
 
-     fParticleGun->SetParticlePosition(G4ThreeVector(0.*mm,0.*mm,-(distFromCrystSurfToSource+crystSizeZ+1.2*mm+0.8*mm)));
+     fParticleGun->SetParticlePosition(G4ThreeVector(0.*mm,-distFromCrystSurfToSource,0.*mm));
      fParticleGun->SetParticleEnergy(ionEnergy);
      fParticleGun->SetParticleMomentumDirection(G4ThreeVector(0.,0.,0.));
      fParticleGun->GeneratePrimaryVertex(anEvent);
