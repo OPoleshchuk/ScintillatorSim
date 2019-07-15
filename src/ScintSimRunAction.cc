@@ -74,13 +74,13 @@ void ScintSimRunAction::BeginOfRunAction(const G4Run* run)
 
 
   if (crystShape == "box") {
-  fileName = crystMatName+"_"+crystShape+"_"+crystSizeX+"mmx"+crystSizeY+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt_"+"E="+gammaEnergyStr+"MeV"+".root";
+  fileName = crystMatName+"_"+crystShape+"_"+crystSizeX+"mmx"+crystSizeY+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt_"+"E"+gammaEnergyStr+"MeV"+".root";
   }
   else if (crystShape == "cylinder") {
-  fileName = crystMatName+"_"+crystShape+"_R"+crystSizeX+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt_"+"E="+gammaEnergyStr+"MeV"+".root";
+  fileName = crystMatName+"_"+crystShape+"_R"+crystSizeX+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt_"+"E"+gammaEnergyStr+"MeV"+".root";
   }
   else {
-  fileName = crystMatName+"_"+crystShape+crystSizeX+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt_"+"E="+gammaEnergyStr+"MeV"+".root";
+  fileName = crystMatName+"_"+crystShape+crystSizeX+"mmx"+crystSizeZ+"mm_"+crystSourceDist+"mm_"+numberOfEvents+"evnt_"+"E"+gammaEnergyStr+"MeV"+".root";
   }
 
   // Open an output file
