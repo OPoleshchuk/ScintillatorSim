@@ -1,19 +1,19 @@
 #!/bin/bash
-iterator=1000
-while [ $iterator -le 3000 ]
+iterator=10
+while [ $iterator -le 10000 ]
 do
 ba="gammaEnergy="
 ca=$iterator
 
 ea=$ba$ca
 
-if [ $iterator -lt 200 ]
+if [ $iterator -lt 300 ]
 then
 	((iterator=iterator+10))
-elif [ $iterator -ge 200 ] && [ $iterator -lt 1000 ]
+elif [ $iterator -ge 300 ] && [ $iterator -lt 2000 ]
 then
-	((iterator=iterator+100))
-elif [ $iterator -ge 1000 ]
+	((iterator=iterator+50))
+elif [ $iterator -ge 2000 ]
 then
 	((iterator=iterator+1000))
 fi
@@ -24,7 +24,7 @@ eb=$ba$cb
 
 ga="s/$ea/$eb/g"
 # !!!!!  The path should be changed in accordance to the SpecMATSimPrimaryGeneratorAction.cc file location  !!!!!
-sed -i ".original" "s/$ea/$eb/g" /Users/Gellemar/ScintillatorSim/src/ScintSimPrimaryGeneratorAction.cc
+sed -i "s/$ea/$eb/g" /mnt/ksf2/H1/user/u0107893/linux/ScintillatorSim/src/ScintSimPrimaryGeneratorAction.cc
 
 make -j4
 ./ScintSim ScintSim.in > ScintSim.out &

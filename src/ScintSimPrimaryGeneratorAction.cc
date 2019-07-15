@@ -29,10 +29,10 @@ ScintSimPrimaryGeneratorAction::ScintSimPrimaryGeneratorAction()
  n_particle = 1;
  fParticleGun  = new G4ParticleGun(n_particle);
  sciCryst = new ScintSimDetectorConstruction();
- gammaEnergy=511*keV;
+ gammaEnergy=100*keV;
  crystSizeZ = sciCryst->GetSciCrystSizeZ();
 
- distFromCrystSurfToSource = 55*mm;
+ distFromCrystSurfToSource = 131.25*mm;
 
  //################### Isotope source ################################//
  Z = 55;

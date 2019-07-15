@@ -117,11 +117,11 @@ ScintSimDetectorConstruction::ScintSimDetectorConstruction()
   NaI->AddElement (Na, natoms=1);
   NaI->AddElement (I, natoms=1);
 
-  sciCrystMat = NaI;
+  //sciCrystMat = NaI;
 
 
   //Define CeBr3 material and its compounds//
-  /*
+
   Ce =
 	  new G4Element("Cerium",
 		  	"Ce",
@@ -141,7 +141,7 @@ ScintSimDetectorConstruction::ScintSimDetectorConstruction()
   CeBr3->AddElement (Ce, natoms=1);
   CeBr3->AddElement (Br, natoms=3);
 
-  sciCrystMat = CeBr3; */
+  sciCrystMat = CeBr3;
 
   //--------------------------------------------------------//
   //******************** Quartz window *********************//
