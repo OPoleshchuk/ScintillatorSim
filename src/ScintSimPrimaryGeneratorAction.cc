@@ -1,3 +1,10 @@
+///Author: Oleksii Poleshchuk
+///
+///KU Leuven 2016-2019
+///
+///ScintillatorSim is a GEANT4 code for simulation
+///of gamma-rays detection efficiency of a single scintillation detector.
+///
 /// \file ScintSimPrimaryGeneratorAction.cc
 /// \brief Implementation of the ScintSimPrimaryGeneratorAction class
 
@@ -29,7 +36,7 @@ ScintSimPrimaryGeneratorAction::ScintSimPrimaryGeneratorAction()
  n_particle = 1;
  fParticleGun  = new G4ParticleGun(n_particle);
  sciCryst = new ScintSimDetectorConstruction();
- gammaEnergy=100*keV;
+ gammaEnergy=10*keV;
  crystSizeZ = sciCryst->GetSciCrystSizeZ();
 
  distFromCrystSurfToSource = 131.25*mm;

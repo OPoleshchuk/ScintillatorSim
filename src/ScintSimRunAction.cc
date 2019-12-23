@@ -1,3 +1,10 @@
+///Author: Oleksii Poleshchuk
+///
+///KU Leuven 2016-2019
+///
+///ScintillatorSim is a GEANT4 code for simulation
+///of gamma-rays detection efficiency of a single scintillation detector.
+///
 /// \file ScintSimRunAction.cc
 /// \brief Implementation of the ScintSimRunAction class
 
@@ -90,7 +97,8 @@ void ScintSimRunAction::BeginOfRunAction(const G4Run* run)
 
   // Creating histograms
   //
-  analysisManager->CreateH1("EdepRes","Edep in crystal", 15501, 0., 15500*MeV);
+  analysisManager->CreateH1("Total","Edep in crystal", 16000, 0., 16000*MeV);
+  analysisManager->CreateH1("TotalNoRes","Edep in crystal", 16000, 0., 16000*MeV);
 
   // Creating ntuple
   //

@@ -1,3 +1,10 @@
+///Author: Oleksii Poleshchuk
+///
+///KU Leuven 2016-2019
+///
+///ScintillatorSim is a GEANT4 code for simulation
+///of gamma-rays detection efficiency of a single scintillation detector.
+///
 /// \file ScintSimPhysicsList.hh
 /// \brief Definition of the ScintSimPhysicsList class
 

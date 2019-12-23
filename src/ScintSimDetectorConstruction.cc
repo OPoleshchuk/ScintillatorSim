@@ -1,3 +1,10 @@
+///Author: Oleksii Poleshchuk
+///
+///KU Leuven 2016-2019
+///
+///ScintillatorSim is a GEANT4 code for simulation
+///of gamma-rays detection efficiency of a single scintillation detector.
+///
 /// \file ScintSimDetectorConstruction.cc
 /// \brief Implementation of the ScintSimDetectorConstruction class
 
@@ -255,8 +262,8 @@ G4VPhysicalVolume* ScintSimDetectorConstruction::Construct()
 
   G4VisAttributes* WorldVisAtt =
 	  new G4VisAttributes(G4Colour(0.0, 0.0, 4.0));				//Instantination of visualization atributes with some color
-  WorldVisAtt->SetVisibility(true);						//Pass this object to Visualization Manager for visualization
-  WorldVisAtt->SetForceWireframe(true);					//I still believe that it might make Crystal transparent
+  WorldVisAtt->SetVisibility(false);						//Pass this object to Visualization Manager for visualization
+  //WorldVisAtt->SetForceWireframe(true);					//I still believe that it might make Crystal transparent
   logicWorld->SetVisAttributes(WorldVisAtt);				//Assignment of visualization atributes to the logical volume of the Crystal
   //############################################################################//
 

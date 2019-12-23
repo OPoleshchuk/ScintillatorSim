@@ -1,3 +1,10 @@
+///Author: Oleksii Poleshchuk
+///
+///KU Leuven 2016-2019
+///
+///ScintillatorSim is a GEANT4 code for simulation
+///of gamma-rays detection efficiency of a single scintillation detector.
+///
 /// \file ScintSimEventAction.cc
 /// \brief Implementation of the ScintSimEventAction class
 
@@ -128,6 +135,7 @@ void ScintSimEventAction::EndOfEventAction(const G4Event* event )
     // fill histograms
     //
     analysisManager->FillH1(1, absoEdep);
+    analysisManager->FillH1(2, edep/keV);
 
     // fill ntuple
     //

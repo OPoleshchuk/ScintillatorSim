@@ -44,8 +44,9 @@ target_link_libraries(ScintSim ${Geant4_LIBRARIES})
 set(ScintSIM_SCRIPTS
   ScintSim.in
   ScintSim.out
-  ScintSim.sh
+  ScintSimEnergyScan.sh
   vis.mac
+  ScintillatorSimEnergyScanTotalNoResAnalysis.C
   )
 
 foreach(_script ${ScintSIM_SCRIPTS})

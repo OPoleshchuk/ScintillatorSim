@@ -1,6 +1,21 @@
 #!/bin/bash
+
+#Author: Oleksii Poleshchuk
+#
+#KU Leuven 2016-2019
+#
+#ScintillatorSim is a GEANT4 code for simulation
+#of gamma-rays detection efficiency of a single scintillation detector.
+#
+#\file ScintSimEnergyScan.sh
+#
+#This script is used for automatic scanning over a point source energy determined
+#by the "gammaEnergy=" variable in the /src/ScintSimPrimaryGeneratorAction.cc
+#file. The position of the source remain either constant or can be defind as a
+#random distribution within a certain space.
+
 iterator=10
-while [ $iterator -le 10000 ]
+while [ $iterator -le 14000 ]
 do
 ba="gammaEnergy="
 ca=$iterator
@@ -12,7 +27,7 @@ then
 	((iterator=iterator+10))
 elif [ $iterator -ge 300 ] && [ $iterator -lt 2000 ]
 then
-	((iterator=iterator+50))
+	((iterator=iterator+100))
 elif [ $iterator -ge 2000 ]
 then
 	((iterator=iterator+1000))
@@ -23,10 +38,10 @@ cb=$iterator
 eb=$ba$cb
 
 ga="s/$ea/$eb/g"
-# !!!!!  The path should be changed in accordance to the SpecMATSimPrimaryGeneratorAction.cc file location  !!!!!
-sed -i "s/$ea/$eb/g" /mnt/ksf2/H1/user/u0107893/linux/ScintillatorSim/src/ScintSimPrimaryGeneratorAction.cc
+# !!!!!  The path should be changed in accordance to the SpecMATSimPrimaryGeneratorAction.cc source file location  !!!!!
+sed -i "s/$ea/$eb/g" ../ScintillatorSim/src/ScintSimPrimaryGeneratorAction.cc
 
-make -j4
+make -j20
 ./ScintSim ScintSim.in > ScintSim.out &
 PID=$!
 # Note: From http://stackoverflow.com/questions/12199631/convert-seconds-to-hours-minutes-seconds

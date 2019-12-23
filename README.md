@@ -1,4 +1,6 @@
 # ScintillatorSim
+Author: Oleksii Poleshchuk
+
 This simulation was written during studying of GEANT4 and evolve over time from a one crystal into a crystal array. Now it forms the basis of Scintscint. The latest stable version with a one crystal is stored here. Crystal could take two of the most widespread detector shapes, cubic and cylinder. Crystal in the simulation wrapped in a reflector material and stored in aluminum housing with a quartz window.
 
 Cube                       |  Cylinder
