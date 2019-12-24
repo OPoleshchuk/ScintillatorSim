@@ -29,8 +29,8 @@ ScintSimPrimaryGeneratorAction::ScintSimPrimaryGeneratorAction()
    sciCryst(0),
    fParticleGun(0)
 {
- source = "gamma";
- //source = "ion";
+ //source = "gamma";
+ source = "ion";
 
  //################### Monoenergetic gamma source ############################//
  n_particle = 1;
@@ -42,8 +42,8 @@ ScintSimPrimaryGeneratorAction::ScintSimPrimaryGeneratorAction()
  distFromCrystSurfToSource = 131.25*mm;
 
  //################### Isotope source ################################//
- Z = 55;
- A = 137;
+ Z = 63;
+ A = 152;
  ionCharge = 0.*eplus;
  excitEnergy = 0.*MeV;
  ionEnergy = 0.*MeV;

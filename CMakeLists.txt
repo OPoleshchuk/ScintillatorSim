@@ -46,7 +46,8 @@ set(ScintSIM_SCRIPTS
   ScintSim.out
   ScintSimEnergyScan.sh
   vis.mac
-  ScintillatorSimEnergyScanTotalNoResAnalysis.C
+  ScintSimEnergyScanTotalNoResAnalysis.C
+  createFileNamesForScintSimEnergyScanTotalNoResAnalysis.py
   )
 
 foreach(_script ${ScintSIM_SCRIPTS})
