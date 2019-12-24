@@ -29,8 +29,8 @@ ScintSimPrimaryGeneratorAction::ScintSimPrimaryGeneratorAction()
    sciCryst(0),
    fParticleGun(0)
 {
- //source = "gamma";
- source = "ion";
+ source = "gamma";
+ //source = "ion";
 
  //################### Monoenergetic gamma source ############################//
  n_particle = 1;
